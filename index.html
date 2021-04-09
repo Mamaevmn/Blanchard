@@ -17,7 +17,8 @@
   <script src="js/just-validate.min.js"></script>
   <script src="js/inputmask.min.js"></script>
   <script src="js/popper.min.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script src="js/focus-visible-btn.min.js"></script>
   <script src="js/burger-menu.js" defer></script>
   <script src="js/sliders.js" defer></script>
   <script src="js/select.js" defer></script>
@@ -28,15 +29,16 @@
   <script src="js/feedback-form.js" defer></script>
   <script src="js/map.js"></script>
   <script src="js/script.js" defer></script>
+
 </head>
 <body>
   <header class="header">
     <div class="header__top">
       <div class="container header__container">
         <a href="#!" class="header__logo-link logo-link">
-          <img class="header__logo-img logo-img" src="image/logo/logo.svg" alt="">
+          <img class="header__logo-img logo-img" src="image/logo/logo.svg" alt="Логотип Blanchard">
         </a>
-        <button id="header__menu-btn" class="header__menu--dropped">
+        <button id="header__menu-btn" class="header__menu--dropped" title="Меню">
           <span></span>
         </button>
         <nav id="header__menu" class="header__menu">
@@ -81,111 +83,112 @@
             Войти
           </a>
         </nav>
-        <button class="searchbtn"></button>
+        <button class="searchbtn" title="Поиск">
+        </button>
       </div>
     </div>
     <div class="header__down">
       <div class="container header__container">
-        <ul class="artstyles__list">
-          <li class="artstyles__item">
-            <div class="select">
-              <div class="select__header">
-                <span class="select__current" tabindex="0">Реализм</span>
-                <div class="select__icon"></div>
+          <ul class="artstyles">
+            <li class="artstyles__item">
+              <div class="select">
+                <button class="select__header">
+                  <span class="select__current">Реализм</span>
+                  <span class="select__icon"></span>
+                </button>
+                <div class="select__body">
+                  <ul class="select__scroll-block">
+                    <li class="select__item">
+                      <a href="#!" class="select__item-link">Тинторетто</a>
+                    </li>
+                    <li class="select__item">
+                      <a href="#!" class="select__item-link">Фридрих</a>
+                    </li>
+                    <li class="select__item">
+                      <a href="#!" class="select__item-link">Леонардо</a>
+                    </li>
+                    <li class="select__item">
+                      <a href="#!" class="select__item-link">Верроккьо</a>
+                    </li>
+                    <li class="select__item">
+                      <a href="#!" class="select__item-link">Тинторетто</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="select__body">
-                <ul class="select__scroll-block">
-                  <li class="select__item">
-                    <a href="#!" class="select__item-link">Тинторетто</a>
-                  </li>
-                  <li class="select__item">
-                    <a href="#!" class="select__item-link">Фридрих</a>
-                  </li>
-                  <li class="select__item">
-                    <a href="#!" class="select__item-link">Леонардо</a>
-                  </li>
-                  <li class="select__item">
-                    <a href="#!" class="select__item-link">Верроккьо</a>
-                  </li>
-                  <li class="select__item">
-                    <a href="#!" class="select__item-link">Тинторетто</a>
-                  </li>
-                </ul>
+            </li>
+            <li class="artstyles__item">
+              <div class="select">
+                <button class="select__header">
+                  <span class="select__current">Импрессионизм</span>
+                  <span class="select__icon"></span>
+                </button>
+                <div class="select__body">
+                  <ul class="select__scroll-block">
+                    <li class="select__item">
+                      <a href="#!" class="select__item-link">Имя художника</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
-          </li>
-          <li class="artstyles__item">
-            <div class="select">
-              <div class="select__header">
-                <span class="select__current" tabindex="0">Импрессионизм</span>
-                <div class="select__icon"></div>
+            </li>
+            <li class="artstyles__item">
+              <div class="select">
+                <button class="select__header">
+                  <span class="select__current">Постимпрессионизм</span>
+                  <span class="select__icon"></span>
+                </button>
+                <div class="select__body">
+                  <ul class="select__scroll-block">
+                    <li class="select__item">
+                      <a href="#!" class="select__item-link">Имя художника</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="select__body">
-                <ul class="select__scroll-block">
-                  <li class="select__item">
-                    <a href="#!" class="select__item-link">Имя художника</a>
-                  </li>
-                </ul>
+            </li>
+            <li class="artstyles__item">
+              <div class="select">
+                <button class="select__header">
+                  <span class="select__current">Авангард</span>
+                  <span class="select__icon"></span>
+                </button>
+                <div class="select__body">
+                  <ul class="select__scroll-block">
+                    <li class="select__item">
+                      <a href="#!" class="select__item-link">Имя художника</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
-          </li>
-          <li class="artstyles__item">
-            <div class="select">
-              <div class="select__header">
-                <span class="select__current" tabindex="0">Постимпрессионизм</span>
-                <div class="select__icon"></div>
+            </li>
+            <li class="artstyles__item">
+              <div class="select">
+                <button class="select__header">
+                  <span class="select__current">Футуризм</span>
+                  <span class="select__icon"></span>
+                </button>
+                <div class="select__body">
+                  <ul class="select__scroll-block">
+                    <li class="select__item">
+                      <a href="#!" class="select__item-link">Имя художника</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="select__body">
-                <ul class="select__scroll-block">
-                  <li class="select__item">
-                    <a href="#!" class="select__item-link">Имя художника</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="artstyles__item">
-            <div class="select">
-              <div class="select__header">
-                <span class="select__current" tabindex="0">Авангард</span>
-                <div class="select__icon"></div>
-              </div>
-              <div class="select__body">
-                <ul class="select__scroll-block">
-                  <li class="select__item">
-                    <a href="#!" class="select__item-link">Имя художника</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="artstyles__item">
-            <div class="select">
-              <div class="select__header">
-                <span class="select__current" tabindex="0">Футуризм</span>
-                <div class="select__icon"></div>
-              </div>
-              <div class="select__body">
-                <ul class="select__scroll-block">
-                  <li class="select__item">
-                    <a href="#!" class="select__item-link">Имя художника</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
         <form class="searchform" action="https://jsonplaceholder.typicode.com/posts" method="POST">
           <label for="search" class="hidden">Поиск по сайту</label>
-          <input type="text" class="searchform__input" id="search" placeholder="Поиск по сайту" autocomplete="off">
-          <button class="searchform__btn"></button>
+          <input type="text" class="searchform__input" id="search" placeholder="Поиск по сайту" required autocomplete="off">
+          <button class="searchform__btn" title="Поиск"></button>
         </form>
       </div>
     </div>
   </header>
   <main class="main">
     <section id="hero" class="hero">
-      <div id="hero__slider" class="container hero__container">
+      <div id="hero__slider" class="hero__container">
         <ul class="hero__swiper-wrapper">
           <li class="hero__swiper-slide">
             <picture class="hero__swiper-img">
@@ -212,13 +215,15 @@
             </picture>
           </li>
         </ul>
-        <h1 class="hero__headline">
+      </div>
+      <div class="container hero__content-container">
+        <h2 class="hero__headline">
           Прикоснитесь к&nbsp;прекрасному
-        </h1>
+        </h2>
         <p class="hero__description">
           Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
         </p>
-        <a href="#contacts" class="hero__subscribe-btn">
+        <a href="#contacts" class="hero__subscribe-btn focus-visible-btn">
           Подписаться на рассылку
         </a>
       </div>
@@ -245,10 +250,10 @@
             </p>
             <div class="gallery__filter">
               <div class="gallery-select">
-                <div class="gallery-select__header">
-                  <span class="gallery-select__current" tabindex="0">Автор</span>
-                  <div class="gallery-select__icon select__icon"></div>
-                </div>
+                <button class="gallery-select__header">
+                  <span class="gallery-select__current">Автор</span>
+                  <span class="gallery-select__icon select__icon"></span>
+                </button>
                 <div class="gallery-select__body">
                   <ul class="select__scroll-block">
                     <li class="gallery-select__item">
@@ -309,242 +314,152 @@
           <ul class="gallery__list">
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/1_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/1.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/1.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/2_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/2.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/2.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/3_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/3.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/3.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/4_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/4.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/4.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/5_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/5.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/5.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/6_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/6.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/6.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/7_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/7.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/7.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/8_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/8.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/8.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/9_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/9.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/9.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/10_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/10.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/10.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/11_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/11.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/11.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/12_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/12.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/12.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/13_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/13.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/13.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/14_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/14.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/14.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/15_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/15.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/15.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/16_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/16.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/16.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/17_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/17.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/17.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/18_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/18.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/18.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/19_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/19.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/19.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/20_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/20.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/20.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/21_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/21.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/21.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/22_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/22.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/22.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/23_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/23.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/23.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/24_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/24.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/24.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/25_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/25.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/25.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/26_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/26.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/26.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/27_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/27.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/27.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/28_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/28.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/28.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/29_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/29.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/29.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                <picture class="gallery__picture">
-                  <source srcset="image/picture/gallery/30_mobile.jpg" media="(max-width: 767px)">
-                  <img class="gallery__img" src="image/picture/gallery/30.jpg" alt="Описание к картине">
-                </picture>
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/30.jpg" alt="Описание к картине">
               </a>
             </li>
           </ul>
@@ -556,7 +471,7 @@
         <div id="zoom-popup" class="popup">
           <span id="popup__close" class="popup__close-btn">&times;</span>
           <div class="popup__caption">
-            <img id="popup__img" class="popup__img" src="image/picture/" alt="">
+            <img id="popup__img" class="popup__img" src="image/loadicon/loadicon.gif" alt="Сюда автоматически вставляется описание к открываемому изображению">
             <p id="popup__desc" class="popup__desc"></p>
           </div>
         </div>
@@ -612,8 +527,8 @@
           </p>
           <div class="catalog__painters">
             <ul class="catalog__biography-list">
-              <li class="catalog__biography-item" id="benedetto">
-                <img src="image/picture/catalog/benedetto.jpg" alt="" class="catalog__painter-photo">
+              <li class="catalog__biography-item" id="benedetto--ru">
+                <img src="image/picture/catalog/benedetto.jpg" alt="Бенедетто ди Биндо" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Бенедетто ди Биндо
                 </h3>
@@ -624,8 +539,8 @@
                   Бенедетто ди Биндо остался в истории искусства как сиенский художник, так сказать, «второго ряда», несмотря на то, что за свою короткую жизнь он выполнил ряд весьма престижных заказов, включая работы в Сиенском соборе (работы в главном соборе республики второстепенным художникам не поручались). Обучение он прошёл у Таддео ди Бартоло, крупного сиенского мастера поздней готики, в боттеге которого Бенедетто трудился вместе с Грегорио ди Чекко. Наибольшее влияние на его творчество оказали работы Симоне Мартини, в частности в выборе колорита, а тонко проработанные лица его персонажей напоминают произведения Джованни да Милано.
                 </p>
               </li>
-              <li class="catalog__biography-item" id="bergognone">
-                <img src="image/picture/catalog/bergognone.jpg" alt="" class="catalog__painter-photo">
+              <li class="catalog__biography-item" id="bergognone--ru">
+                <img src="image/picture/catalog/bergognone.jpg" alt="Амброджо Бергоньоне" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Амброджо Бергоньоне
                 </h3>
@@ -637,8 +552,8 @@
                   Его завещание датировано 4 апреля 1523, в том же году он умер. Одним из его учеников считают Бернардино Луини.
                 </p>
               </li>
-              <li class="catalog__biography-item" id="bissolo">
-                <img src="image/picture/catalog/bissolo.jpg" alt="" class="catalog__painter-photo">
+              <li class="catalog__biography-item" id="bissolo--ru">
+                <img src="image/picture/catalog/bissolo.jpg" alt="Франческо Биссоло" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Франческо Биссоло
                 </h3>
@@ -652,8 +567,8 @@
                   Работы художника хранятся ныне во многих музеях мира. В санкт-петербургском Эрмитаже находится его картина «Богоматерь с Младенцем Христом». В Британской Национальной галерее — «Мадонна с Младенцем со святыми и донатором». Ряд его полотен находится в музеях Варшавы, Лос-Анджелеса (Музей Нортона Саймона и Los Angeles County Museum of Art), Дэйтоновском институте искусств (штат Огайо, США) и др.
                 </p>
               </li>
-              <li class="catalog__biography-item" id="boltraffio">
-                <img src="image/picture/catalog/boltraffio.jpg" alt="" class="catalog__painter-photo">
+              <li class="catalog__biography-item" id="boltraffio--ru">
+                <img src="image/picture/catalog/boltraffio.jpg" alt="Джованни Антонио Больтраффио (Бельтраффио)" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Джованни Антонио Больтраффио (Бельтраффио)
                 </h3>
@@ -666,8 +581,8 @@
                   Некоторые искусствоведы предполагают, что фигура младенца на картине Леонардо да Винчи «Мадонна Литта» принадлежит кисти Джованни Антонио Больтраффио. Известны подготовительные рисунки Джованни Антонио Больтраффио, в точности воспроизводящие эту фигуру.
                 </p>
               </li>
-              <li class="catalog__biography-item" id="bonsignori">
-                <img src="image/picture/catalog/bonsignori.jpg" alt="" class="catalog__painter-photo">
+              <li class="catalog__biography-item" id="bonsignori--ru">
+                <img src="image/picture/catalog/bonsignori.jpg" alt="Франческо Бонсиньори" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Франческо Бонсиньори
                 </h3>
@@ -679,8 +594,8 @@
                   Среди известных творений этого периода самыми ранними произведениями художника являются полотна «Мадонна со спящим младенцем» 1483 года и «Алтарь Даль Бово», или «Мадонна на троне с предстоящими святыми и донатором Альтабеллой Авогадро» 1484 года, которые ныне входят в собрание Общественного музея Вероны.
                 </p>
               </li>
-              <li class="catalog__biography-item" id="botticini">
-                <img src="image/picture/catalog/botticini.jpg" alt="" class="catalog__painter-photo">
+              <li class="catalog__biography-item" id="botticini--ru">
+                <img src="image/picture/catalog/botticini.jpg" alt="Рафаэль Боттичини" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Рафаэль Боттичини
                 </h3>
@@ -691,8 +606,8 @@
                   Рафаэлло принадлежал к флорентийской артистической династии — его дед, Джованни ди Доменико, был известен как художник, расписывавший игральные карты (хотя учёные не исключают, что он мог заниматься и более серьёзной живописью); его отец — Франческо ди Джованни, был известным флорентийским мастером. Первые художественные навыки Рафаэлло получил в мастерской отца; с этой мастерской связан и ранний период его творчества. В 1490-е годы, когда формировался художественный вкус Рафаэлло, мастерская его отца занималась в основном исполнением заказов в провинциальных городках в окрестностях Флоренции. В 1498 году Франческо Боттичини скончался, Рафаэлло унаследовал мастерскую и продолжил работать в провинции. По мнению исследователей его творчества, это был художник скромного дарования, никогда не стремившийся завоевать высоких позиций в интеллектуальном и финансовом центре Тосканы — Флоренции, и довольствовавшийся заказами, которые ему давали провинциальные храмы. Его искусство было эклектичным, и наряду с влиянием отца включало связь с искусством Перуджино, Ридольфо Гирландайо, Лоренцо ди Креди, Фра Бартоломео и др.
                 </p>
               </li>
-              <li class="catalog__biography-item" id="bramantino">
-                <img src="image/picture/catalog/empty-img.png" alt="" class="catalog__painter-photo">
+              <li class="catalog__biography-item" id="bramantino--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
                 </h3>
@@ -703,8 +618,8 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="brea">
-                <img src="image/picture/catalog/empty-img.png" alt="" class="catalog__painter-photo">
+              <li class="catalog__biography-item" id="brea--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
                 </h3>
@@ -715,8 +630,8 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="tucci">
-                <img src="image/picture/catalog/empty-img.png" alt="" class="catalog__painter-photo">
+              <li class="catalog__biography-item" id="tucci--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
                 </h3>
@@ -727,8 +642,8 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="vecchietta">
-                <img src="image/picture/catalog/empty-img.png" alt="" class="catalog__painter-photo">
+              <li class="catalog__biography-item" id="vecchietta--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
                 </h3>
@@ -739,8 +654,8 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="verrocchio">
-                <img src="image/picture/catalog/empty-img.png" alt="" class="catalog__painter-photo">
+              <li class="catalog__biography-item" id="verrocchio--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
                 </h3>
@@ -751,8 +666,8 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item is-active" id="domenico">
-                <img src="image/picture/catalog/domenico.jpg" alt="" class="catalog__painter-photo">
+              <li class="catalog__biography-item is-active" id="domenico--ru">
+                <img src="image/picture/catalog/domenico.jpg" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Доменико Гирландайо
                 </h3>
@@ -763,8 +678,8 @@
                   Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
                 </p>
               </li>
-              <li class="catalog__biography-item" id="gozzoli">
-                <img src="image/picture/catalog/empty-img.png" alt="" class="catalog__painter-photo">
+              <li class="catalog__biography-item" id="gozzoli--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
                 </h3>
@@ -775,8 +690,8 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="granacci">
-                <img src="image/picture/catalog/empty-img.png" alt="" class="catalog__painter-photo">
+              <li class="catalog__biography-item" id="granacci--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
                 </h3>
@@ -787,8 +702,8 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="gregorio-di-cecco">
-                <img src="image/picture/catalog/empty-img.png" alt="" class="catalog__painter-photo">
+              <li class="catalog__biography-item" id="gregorio-di-cecco--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
                 </h3>
@@ -799,8 +714,8 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="giovanni-da-udine">
-                <img src="image/picture/catalog/empty-img.png" alt="" class="catalog__painter-photo">
+              <li class="catalog__biography-item" id="giovanni-da-udine--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
                 </h3>
@@ -811,8 +726,8 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="giovanni-di-paolo">
-                <img src="image/picture/catalog/empty-img.png" alt="" class="catalog__painter-photo">
+              <li class="catalog__biography-item" id="giovanni-di-paolo--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
                 </h3>
@@ -823,8 +738,8 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="giorgione">
-                <img src="image/picture/catalog/empty-img.png" alt="" class="catalog__painter-photo">
+              <li class="catalog__biography-item" id="giorgione--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
                 </h3>
@@ -835,8 +750,8 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="parentino">
-                <img src="image/picture/catalog/empty-img.png" alt="" class="catalog__painter-photo">
+              <li class="catalog__biography-item" id="parentino--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
                 </h3>
@@ -847,8 +762,8 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="pesellino">
-                <img src="image/picture/catalog/empty-img.png" alt="" class="catalog__painter-photo">
+              <li class="catalog__biography-item" id="pesellino--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
                 </h3>
@@ -859,8 +774,8 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="perugino">
-                <img src="image/picture/catalog/empty-img.png" alt="" class="catalog__painter-photo">
+              <li class="catalog__biography-item" id="perugino--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
                 </h3>
@@ -871,8 +786,8 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="peruzzi">
-                <img src="image/picture/catalog/empty-img.png" alt="" class="catalog__painter-photo">
+              <li class="catalog__biography-item" id="peruzzi--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
                 </h3>
@@ -883,8 +798,8 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="pisanello">
-                <img src="image/picture/catalog/empty-img.png" alt="" class="catalog__painter-photo">
+              <li class="catalog__biography-item" id="pisanello--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
                 </h3>
@@ -895,8 +810,8 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="pinturicchio">
-                <img src="image/picture/catalog/empty-img.png" alt="" class="catalog__painter-photo">
+              <li class="catalog__biography-item" id="pinturicchio--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
                 </h3>
@@ -913,122 +828,122 @@
                 <h3 class="catalog__ages-title">C 1400 по 1499 гг.</h3>
                 <ul class="catalog__painters-list">
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" name="benedetto">
+                    <a class="catalog__painters-link" id="link-benedetto--ru" tabindex="0">
                       Бенедетто ди Биндо
                     </a>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" name="bergognone">
+                    <a class="catalog__painters-link" id="link-bergognone--ru" tabindex="0">
                       Бергоньоне, Амброджо
                     </a>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" name="bissolo">
+                    <a class="catalog__painters-link" id="link-bissolo--ru" tabindex="0">
                       Биссоло, Франческо                      
                     </a>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" name="boltraffio">
+                    <a class="catalog__painters-link" id="link-boltraffio--ru" tabindex="0">
                       Больтраффио, Джованни                   
                     </a>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" name="bonsignori">
+                    <a class="catalog__painters-link" id="link-bonsignori--ru" tabindex="0">
                       Бонсиньори, Франческо                  
                     </a>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" name="botticini">
+                    <a class="catalog__painters-link" id="link-botticini--ru" tabindex="0">
                       Боттичини, Рафаэлло
                     </a>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" name="bramantino">
+                    <a class="catalog__painters-link" id="link-bramantino--ru" tabindex="0">
                       Брамантино            
                     </a>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" name="brea">
+                    <a class="catalog__painters-link" id="link-brea--ru" tabindex="0">
                       Бреа, Людовико
                     </a>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" name="tucci">
+                    <a class="catalog__painters-link" id="link-tucci--ru" tabindex="0">
                       Бьяджо д’Антонио Туччи
                     </a>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" name="vecchietta">
+                    <a class="catalog__painters-link" id="link-vecchietta--ru" tabindex="0">
                       Веккьетта
                     </a>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" name="verrocchio">
+                    <a class="catalog__painters-link" id="link-verrocchio--ru" tabindex="0">
                       Андреа Верроккьо
                     </a>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link is-active" name="domenico">
+                    <a class="catalog__painters-link is-active" id="link-domenico--ru" tabindex="0">
                       Доменико Гирландайо                   
                     </a>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" name="gozzoli">
+                    <a class="catalog__painters-link" id="link-gozzoli--ru" tabindex="0">
                       Беноццо Гоццоли                 
                     </a>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" name="granacci">
+                    <a class="catalog__painters-link" id="link-granacci--ru" tabindex="0">
                       Граначчи, Франческо
                     </a>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" name="gregorio-di-cecco">
+                    <a class="catalog__painters-link" id="link-gregorio-di-cecco--ru" tabindex="0">
                       Грегорио ди Чекко             
                     </a>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" name="giovanni-da-udine">
+                    <a class="catalog__painters-link" id="link-giovanni-da-udine--ru" tabindex="0">
                       Джованни да Удине
                     </a>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" name="giovanni-di-paolo">
+                    <a class="catalog__painters-link" id="link-giovanni-di-paolo--ru" tabindex="0">
                       Джованни ди Паоло
                     </a>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" name="giorgione">
+                    <a class="catalog__painters-link" id="link-giorgione--ru" tabindex="0">
                       Джорджоне
                     </a>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" name="parentino">
+                    <a class="catalog__painters-link" id="link-parentino--ru" tabindex="0">
                       Парентино, Бернардо
                     </a>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" name="pesellino">
+                    <a class="catalog__painters-link" id="link-pesellino--ru" tabindex="0">
                       Пезеллино
                     </a>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" name="perugino">
+                    <a class="catalog__painters-link" id="link-perugino--ru" tabindex="0">
                       Пьетро Перуджино
                     </a>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" name="peruzzi">
+                    <a class="catalog__painters-link" id="link-peruzzi--ru" tabindex="0">
                       Перуцци, Бальдассаре
                     </a>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" name="pisanello">
+                    <a class="catalog__painters-link" id="link-pisanello--ru" tabindex="0">
                       Пизанелло
                     </a>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" name="pinturicchio">
+                    <a class="catalog__painters-link" id="link-pinturicchio--ru" tabindex="0">
                       Пинтуриккьо
                     </a>
                   </li>
@@ -1070,7 +985,7 @@
         <ul class="events__list desktop">
           <li class="events__item is-active">
             <div class="card">
-              <img src="image/picture/events/book_engraving.jpg" alt="" class="card__img">
+              <img src="image/picture/events/book_engraving.jpg" alt="Книжная гравюра в живом восприятии" class="card__img">
               <div class="card__caption">
                 <p class="card__place">
                   Музей им. Щусева
@@ -1091,7 +1006,7 @@
           </li>
           <li class="events__item is-active">
             <div class="card">
-              <img src="image/picture/events/open_discussion.jpg" alt="" class="card__img">
+              <img src="image/picture/events/open_discussion.jpg" alt="«Открытая дискуссия». Дмитрий Петров и Сергей Ильин." class="card__img">
               <div class="card__caption">
                 <p class="card__place">
                   ММОМА
@@ -1112,7 +1027,7 @@
           </li>
           <li class="events__item is-active">
             <div class="card">
-              <img src="image/picture/events/form2020.jpg" alt="" class="card__img">
+              <img src="image/picture/events/form2020.jpg" alt="Выставка «Формация 2020»" class="card__img">
               <div class="card__caption">
                 <p class="card__place">
                   Еврейский музей
@@ -1133,7 +1048,7 @@
           </li>
           <li class="events__item">
             <div class="card">
-              <img src="image/picture/events/bienally.jpg" alt="" class="card__img">
+              <img src="image/picture/events/bienally.jpg" alt="XXIV Международная биеннале молодого искусства" class="card__img">
               <div class="card__caption">
                 <p class="card__place">
                   Третьяковка на Крымском валу
@@ -1154,7 +1069,7 @@
           </li>
           <li class="events__item">
             <div class="card">
-              <img src="image/picture/events/john_winsor.jpg" alt="" class="card__img">
+              <img src="image/picture/events/john_winsor.jpg" alt="Джон Винзор. Фотографии из серии «Метафора серебра»" class="card__img">
               <div class="card__caption">
                 <p class="card__place">
                   ММАМ
@@ -1174,14 +1089,14 @@
             </div>
           </li>
         </ul>
-        <button class="events__allevents-btn">
+        <button class="events__allevents-btn focus-visible-btn">
           Все события
         </button>
         <div class="events__slider" id="event__slider">
           <ul class="events__list">
             <li class="events__item">
               <div class="card">
-                <img src="image/picture/events/book_engraving.jpg" alt="" class="card__img">
+                <img src="image/picture/events/book_engraving.jpg" alt="Книжная гравюра в живом восприятии" class="card__img">
                 <div class="card__caption">
                   <p class="card__place">
                     Музей им. Щусева
@@ -1202,7 +1117,7 @@
             </li>
             <li class="events__item">
               <div class="card">
-                <img src="image/picture/events/open_discussion.jpg" alt="" class="card__img">
+                <img src="image/picture/events/open_discussion.jpg" alt="«Открытая дискуссия». Дмитрий Петров и Сергей Ильин." class="card__img">
                 <div class="card__caption">
                   <p class="card__place">
                     ММОМА
@@ -1223,7 +1138,7 @@
             </li>
             <li class="events__item">
               <div class="card">
-                <img src="image/picture/events/form2020.jpg" alt="" class="card__img">
+                <img src="image/picture/events/form2020.jpg" alt="Выставка «Формация 2020»" class="card__img">
                 <div class="card__caption">
                   <p class="card__place">
                     Еврейский музей
@@ -1244,7 +1159,7 @@
             </li>
             <li class="events__item">
               <div class="card">
-                <img src="image/picture/events/bienally.jpg" alt="" class="card__img">
+                <img src="image/picture/events/bienally.jpg" alt="XXIV Международная биеннале молодого искусства" class="card__img">
                 <div class="card__caption">
                   <p class="card__place">
                     Третьяковка на Крымском валу
@@ -1265,7 +1180,7 @@
             </li>
             <li class="events__item">
               <div class="card">
-                <img src="image/picture/events/john_winsor.jpg" alt="" class="card__img">
+                <img src="image/picture/events/john_winsor.jpg" alt="Джон Винзор. Фотографии из серии «Метафора серебра»" class="card__img">
                 <div class="card__caption">
                   <p class="card__place">
                     ММАМ
@@ -1394,7 +1309,7 @@
                 Бестселлеры
                 <span class="checkbox__checkmark"></span>
               </label>
-              <button class="checkbox__btn" onclick="closeBtn(this)"></button>
+              <button class="checkbox__btn" onclick="closeBtn(this)" title="убрать категорию Бестселлеры"></button>
             </li>
             <li class="editions__category-item">
               <label for="category-2" class="checkbox__label" tabindex="0">
@@ -1402,7 +1317,7 @@
                 Искусство
                 <span class="checkbox__checkmark"></span>
               </label>
-              <button class="checkbox__btn" onclick="closeBtn(this)"></button>
+              <button class="checkbox__btn" onclick="closeBtn(this)" title="убрать категорию Искусство"></button>
             </li>
             <li class="editions__category-item">
               <label for="category-3" class="checkbox__label" tabindex="0">
@@ -1410,7 +1325,7 @@
                 Архитектура
                 <span class="checkbox__checkmark"></span>
               </label>
-              <button class="checkbox__btn" onclick="closeBtn(this)"></button>
+              <button class="checkbox__btn" onclick="closeBtn(this)" title="убрать категорию Архитектура"></button>
             </li>
             <li class="editions__category-item">
               <label for="category-4" class="checkbox__label" tabindex="0">
@@ -1418,7 +1333,7 @@
                 Дизайн
                 <span class="checkbox__checkmark"></span>
               </label>
-              <button class="checkbox__btn" onclick="closeBtn(this)"></button>
+              <button class="checkbox__btn" onclick="closeBtn(this)" title="убрать категорию Дизайн"></button>
             </li>
             <li class="editions__category-item">
               <label for="category-5" class="checkbox__label" tabindex="0">
@@ -1426,7 +1341,7 @@
                 Мода
                 <span class="checkbox__checkmark"></span>
               </label>
-              <button class="checkbox__btn" onclick="closeBtn(this)"></button>
+              <button class="checkbox__btn" onclick="closeBtn(this)" title="убрать категорию Мода"></button>
             </li>
             <li class="editions__category-item">
               <label for="category-6" class="checkbox__label" tabindex="0">
@@ -1434,7 +1349,7 @@
                 Детям
                 <span class="checkbox__checkmark"></span>
               </label>
-              <button class="checkbox__btn" onclick="closeBtn(this)"></button>
+              <button class="checkbox__btn" onclick="closeBtn(this)" title="убрать категорию Детям"></button>
             </li>
             <li class="editions__category-item">
               <label for="category-7" class="checkbox__label" tabindex="0">
@@ -1442,7 +1357,7 @@
                 Художественная литература
                 <span class="checkbox__checkmark"></span>
               </label>
-              <button class="checkbox__btn" onclick="closeBtn(this)"></button>
+              <button class="checkbox__btn" onclick="closeBtn(this)" title="убрать категорию Художественная литература"></button>
             </li>
             <li class="editions__category-item">
               <label for="category-8" class="checkbox__label" tabindex="0">
@@ -1450,7 +1365,7 @@
                 Публицистика
                 <span class="checkbox__checkmark"></span>
               </label>
-              <button class="checkbox__btn" onclick="closeBtn(this)"></button>
+              <button class="checkbox__btn" onclick="closeBtn(this)" title="убрать категорию Публицистика"></button>
             </li>
             <li class="editions__category-item">
               <label for="category-9" class="checkbox__label" tabindex="0">
@@ -1458,7 +1373,7 @@
                 Путеводители
                 <span class="checkbox__checkmark"></span>
               </label>
-              <button class="checkbox__btn" onclick="closeBtn(this)"></button>
+              <button class="checkbox__btn" onclick="closeBtn(this)" title="убрать категорию Путеводители"></button>
             </li>
             <li class="editions__category-item">
               <label for="category-10" class="checkbox__label" tabindex="0">
@@ -1466,7 +1381,7 @@
                 Философия
                 <span class="checkbox__checkmark"></span>
               </label>
-              <button class="checkbox__btn" onclick="closeBtn(this)"></button>
+              <button class="checkbox__btn" onclick="closeBtn(this)" title="убрать категорию Философия"></button>
             </li>
             <li class="editions__category-item">
               <label for="category-11" class="checkbox__label" tabindex="0">
@@ -1474,7 +1389,7 @@
                 Учебная литература
                 <span class="checkbox__checkmark"></span>
               </label>
-              <button class="checkbox__btn" onclick="closeBtn(this)"></button>
+              <button class="checkbox__btn" onclick="closeBtn(this)" title="убрать категорию Учебная литература"></button>
             </li>
             <li class="editions__category-item">
               <label for="category-12" class="checkbox__label" tabindex="0">
@@ -1482,7 +1397,7 @@
                 Журналы и газеты
                 <span class="checkbox__checkmark"></span>
               </label>
-              <button class="checkbox__btn" onclick="closeBtn(this)"></button>
+              <button class="checkbox__btn" onclick="closeBtn(this)" title="убрать категорию Журналы и газеты"></button>
             </li>
           </ul>
           <p class="editions__filter-title">
@@ -1507,7 +1422,7 @@
           <ul class="editions__product-list">
             <li class="editions__product-item">
               <div class="product">
-                <img src="image/loadicon/loadicon.gif" data-src="image/picture/editions/1.jpg" alt="" class="product__img swiper-lazy">
+                <img src="image/loadicon/loadicon.gif" data-src="image/picture/editions/1.jpg" alt="Иттен, Иоханнес. Искусство цвета" class="product__img swiper-lazy">
                 <div class="product__name-price">
                   <p class="product__title">
                     Искусство цвета
@@ -1519,12 +1434,12 @@
                 <p class="product__author">
                   Иттен, Иоханнес 
                 </p>
-                <button class="product__btn">Заказать</button>
+                <button class="product__btn focus-visible-btn">Заказать</button>
               </div>
             </li>
             <li class="editions__product-item">
               <div class="product">
-                <img src="image/loadicon/loadicon.gif" data-src="image/picture/editions/2.jpg" alt="" class="product__img swiper-lazy">
+                <img src="image/loadicon/loadicon.gif" data-src="image/picture/editions/2.jpg" alt="Рудер, Эмиль. Типографика" class="product__img swiper-lazy">
                 <div class="product__name-price">
                   <p class="product__title">
                     Типографика
@@ -1536,12 +1451,12 @@
                 <p class="product__author">
                   Рудер, Эмиль
                 </p>
-                <button class="product__btn">Заказать</button>
+                <button class="product__btn focus-visible-btn">Заказать</button>
               </div>
             </li>
             <li class="editions__product-item">
               <div class="product">
-                <img src="image/loadicon/loadicon.gif" data-src="image/picture/editions/3.jpg" alt="" class="product__img swiper-lazy">
+                <img src="image/loadicon/loadicon.gif" data-src="image/picture/editions/3.jpg" alt="Гордон, Юрий. Книга про буквы" class="product__img swiper-lazy">
                 <div class="product__name-price">
                   <p class="product__title">
                     Книга про буквы
@@ -1553,12 +1468,12 @@
                 <p class="product__author">
                   Гордон, Юрий 
                 </p>
-                <button class="product__btn">Заказать</button>
+                <button class="product__btn focus-visible-btn">Заказать</button>
               </div>
             </li>
             <li class="editions__product-item">
               <div class="product">
-                <img src="image/loadicon/loadicon.gif" data-src="image/picture/editions/4.jpg" alt="" class="product__img swiper-lazy">
+                <img src="image/loadicon/loadicon.gif" data-src="image/picture/editions/4.jpg" alt="Кричевский, Владимир. Николай Ильин" class="product__img swiper-lazy">
                 <div class="product__name-price">
                   <p class="product__title">
                     Николай Ильин
@@ -1570,12 +1485,12 @@
                 <p class="product__author">
                   Кричевский, Владимир
                 </p>
-                <button class="product__btn">Заказать</button>
+                <button class="product__btn focus-visible-btn">Заказать</button>
               </div>
             </li>
             <li class="editions__product-item">
               <div class="product">
-                <img src="image/loadicon/loadicon.gif" data-src="image/picture/editions/5.jpg" alt="" class="product__img swiper-lazy">
+                <img src="image/loadicon/loadicon.gif" data-src="image/picture/editions/5.jpg" alt="Мюллер-Брокманн, Йозеф. Модульные сетки в графическом дизайне" class="product__img swiper-lazy">
                 <div class="product__name-price">
                   <p class="product__title">
                     Модульные сетки в граф...
@@ -1587,12 +1502,12 @@
                 <p class="product__author">
                   Мюллер-Брокманн, Йозеф
                 </p>
-                <button class="product__btn">Заказать</button>
+                <button class="product__btn focus-visible-btn">Заказать</button>
               </div>
             </li>
             <li class="editions__product-item">
               <div class="product">
-                <img src="image/loadicon/loadicon.gif" data-src="image/picture/editions/6.jpg" alt="" class="product__img swiper-lazy">
+                <img src="image/loadicon/loadicon.gif" data-src="image/picture/editions/6.jpg" alt="Хеллер, Чваст. Эволюция графических стилей" class="product__img swiper-lazy">
                 <div class="product__name-price">
                   <p class="product__title">
                     Эволюция графических ст...
@@ -1604,12 +1519,12 @@
                 <p class="product__author">
                   Хеллер, Чваст
                 </p>
-                <button class="product__btn">Заказать</button>
+                <button class="product__btn focus-visible-btn">Заказать</button>
               </div>
             </li>
             <li class="editions__product-item">
               <div class="product">
-                <img src="image/loadicon/loadicon.gif" data-src="image/picture/editions/7.jpg" alt="" class="product__img swiper-lazy">
+                <img src="image/loadicon/loadicon.gif" data-src="image/picture/editions/7.jpg" alt="Арнхейм, Рудольф. Искусство и визуальное восприятие" class="product__img swiper-lazy">
                 <div class="product__name-price">
                   <p class="product__title">
                     Искусство и визуальное в...
@@ -1621,7 +1536,7 @@
                 <p class="product__author">
                   Арнхейм, Рудольф
                 </p>
-                <button class="product__btn">Заказать</button>
+                <button class="product__btn focus-visible-btn">Заказать</button>
               </div>
             </li>
           </ul>
@@ -1629,7 +1544,7 @@
         <ul class="editions__product-list mobile">
           <li class="editions__product-item">
             <div class="product">
-              <img src="image/picture/editions/1.jpg" alt="" class="product__img">
+              <img src="image/picture/editions/1.jpg" alt="Иттен, Иоханнес. Искусство цвета" class="product__img">
               <p class="product__title">
                 Искусство цвета
                 </p>
@@ -1639,12 +1554,12 @@
               <p class="product__author">
                 Иттен, Иоханнес 
               </p>
-              <button class="product__btn">Заказать</button>
+              <button class="product__btn focus-visible-btn">Заказать</button>
             </div>
           </li>
           <li class="editions__product-item">
             <div class="product">
-              <img src="image/picture/editions/2.jpg" alt="" class="product__img">
+              <img src="image/picture/editions/2.jpg" alt="Рудер, Эмиль. Типографика" class="product__img">
                 <h3 class="product__title">
                   Типографика
                 </h3>
@@ -1654,12 +1569,12 @@
               <p class="product__author">
                 Рудер, Эмиль
               </p>
-              <button class="product__btn">Заказать</button>
+              <button class="product__btn focus-visible-btn">Заказать</button>
             </div>
           </li>
           <li class="editions__product-item">
             <div class="product">
-              <img src="image/picture/editions/3.jpg" alt="" class="product__img">
+              <img src="image/picture/editions/3.jpg" alt="Гордон, Юрий. Книга про буквы" class="product__img">
                 <h3 class="product__title">
                   Книга про буквы
                 </h3>
@@ -1669,12 +1584,12 @@
               <p class="product__author">
                 Гордон, Юрий 
               </p>
-              <button class="product__btn">Заказать</button>
+              <button class="product__btn focus-visible-btn">Заказать</button>
             </div>
           </li>
           <li class="editions__product-item">
             <div class="product">
-              <img src="image/picture/editions/4.jpg" alt="" class="product__img">
+              <img src="image/picture/editions/4.jpg" alt="Кричевский, Владимир. Николай Ильин" class="product__img">
                 <h3 class="product__title">
                   Николай Ильин
                 </h3>
@@ -1684,12 +1599,12 @@
               <p class="product__author">
                 Кричевский, Влади...
               </p>
-              <button class="product__btn">Заказать</button>
+              <button class="product__btn focus-visible-btn">Заказать</button>
             </div>
           </li>
           <li class="editions__product-item">
             <div class="product">
-              <img src="image/picture/editions/5.jpg" alt="" class="product__img">
+              <img src="image/picture/editions/5.jpg" alt="Мюллер-Брокманн, Йозеф. Модульные сетки в графическом дизайне" class="product__img">
                 <h3 class="product__title">
                   Модульные сетки...
                 </h3>
@@ -1699,12 +1614,12 @@
               <p class="product__author">
                 Мюллер-Брокманн...
               </p>
-              <button class="product__btn">Заказать</button>
+              <button class="product__btn focus-visible-btn">Заказать</button>
             </div>
           </li>
           <li class="editions__product-item">
             <div class="product">
-              <img src="image/picture/editions/6.jpg" alt="" class="product__img">
+              <img src="image/picture/editions/6.jpg" alt="Хеллер, Чваст. Эволюция графических стилей" class="product__img">
                 <h3 class="product__title">
                   Эволюция графич...
                 </h3>
@@ -1714,12 +1629,12 @@
               <p class="product__author">
                 Хеллер, Чваст
               </p>
-              <button class="product__btn">Заказать</button>
+              <button class="product__btn focus-visible-btn">Заказать</button>
             </div>
           </li>
           <li class="editions__product-item">
             <div class="product">
-              <img src="image/picture/editions/7.jpg" alt="" class="product__img">
+              <img src="image/picture/editions/7.jpg" alt="Арнхейм, Рудольф. Искусство и визуальное восприятие" class="product__img">
                 <h3 class="product__title">
                   Искусство и визуа...
                 </h3>
@@ -1729,7 +1644,7 @@
               <p class="product__author">
                 Арнхейм, Рудольф
               </p>
-              <button class="product__btn">Заказать</button>
+              <button class="product__btn focus-visible-btn">Заказать</button>
             </div>
           </li>
         </ul>
@@ -1819,7 +1734,7 @@
           Леонтьевский переулок, дом 5, строение 1
         </div>
       </div>
-      <div class="feedback__container container">
+      <div class="feedback__container">
         <div class="feedback__left">
           <div class="feedback__address desktop">
             <h3 class="feedback__title">
@@ -1839,7 +1754,7 @@
               <label for="tel" class="hidden">Телефон</label>
               <input type="tel" class="feedback__input" id="tel" name="tel" placeholder="Телефон*" autocomplete="off" data-validate-field="tel">
             </div>
-            <button class="feedback__btn" type="submit">Заказать</button>
+            <button class="feedback__btn focus-visible-btn" type="submit">Заказать</button>
           </form>
           <p class="feedback__contact">
             Связаться в один клик
@@ -1863,7 +1778,7 @@
   <footer class="footer">
     <div class="container footer__container">
       <a href="#!" class="footer__logo-link logo-link">
-        <img src="image/logo/logo.svg" alt="" class="logo-img">
+        <img src="image/logo/logo.svg" alt="Логотип Blanchard" class="logo-img">
       </a>
       <ul class="footer__list">
         <li class="footer__item">

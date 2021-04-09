@@ -5,10 +5,13 @@ let heroSlider = new Swiper('#hero__slider', {
   wrapperClass: 'hero__swiper-wrapper',
   slideClass: 'hero__swiper-slide',
   effect: 'fade',
-  grabCursor: true,
+  allowTouchMove: false,
   autoplay: {
     delay: 2500,
   },
+  a11y: {
+    enable: false,
+  }
 });
 
 let gallerySlider = new Swiper('#gallery__slider', {
@@ -23,6 +26,13 @@ let gallerySlider = new Swiper('#gallery__slider', {
     el: '.pagination',
     type: 'fraction',
   },
+  preloadImages: false,
+  lazy: {
+    loadOnTransitionStart: false,
+    loadPrevNext: false,
+  },
+  watchSlidesProgress: true,
+  watchSlidesVisibility: true,
   observer: true,
   observeParents: true,
   observeSlideChildren: true,
@@ -166,10 +176,10 @@ let partnersSlider = new Swiper ('#partners__slider', {
 
 let projectLartnersList = document.querySelector('.partners__list')
 
-projectLartnersList.addEventListener('mouseenter', function(e) {
+projectLartnersList.addEventListener('mouseenter', function() {
   partnersSlider.autoplay.stop();
 });
 
-projectLartnersList.addEventListener('mouseleave', function(e) {
+projectLartnersList.addEventListener('mouseleave', function() {
   partnersSlider.autoplay.start();
 })

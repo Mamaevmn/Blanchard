@@ -7,7 +7,7 @@ function galleryFilterForm (value) {
 // для блока Catalog
 let catalogLangItem = document.querySelectorAll('.catalog__lang-item');
 let catalogLangBtn = document.querySelectorAll('.catalog__lang-btn');
-let catalogPainters = document.querySelectorAll('.catalog__painters');
+let catalogPainters = document.querySelectorAll('.catalog__painters-item');
 
 catalogLangItem.forEach(item =>{
   item.addEventListener('click', function(event) {
@@ -27,8 +27,8 @@ catalogLangItem.forEach(item =>{
 catalogPainters.forEach(el =>{
   el.addEventListener('click', function(event) {
     let target = event.target;
-    let nameTargetLink = target.getAttribute('name');
-  
+    let idTargetLink = target.getAttribute('id').substr(5);
+
     if (target.tagName === 'A' && !target.classList.contains('is-active')) {
       let catalogPaintersItem = target.parentNode.parentNode.children;
 
@@ -36,15 +36,15 @@ catalogPainters.forEach(el =>{
         let itemLink = item.querySelector('.catalog__painters-link');
 
         if (itemLink.classList.contains('is-active')) {
-          let currentNameTargetLink = itemLink.getAttribute('name');
+          let currentIdTargetLink = itemLink.getAttribute('id').substr(5);
 
-          document.getElementById(currentNameTargetLink).classList.remove('is-active');
+          document.getElementById(currentIdTargetLink).classList.remove('is-active');
           itemLink.classList.remove('is-active');
         }
       }
 
       target.classList.add('is-active');
-      document.getElementById(nameTargetLink).classList.add('is-active');
+      document.getElementById(idTargetLink).classList.add('is-active');
     }
   })
 });
