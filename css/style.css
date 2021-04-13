@@ -3,7 +3,7 @@
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/open-sans-v18-latin_cyrillic-regular.woff2') format('woff2'), 
+  src: url('../fonts/open-sans-v18-latin_cyrillic-regular.woff2') format('woff2'),
       url('../fonts/open-sans-v18-latin_cyrillic-regular.woff') format('woff');
 }
 /* open-sans-italic - latin_cyrillic */
@@ -11,7 +11,7 @@
   font-family: 'Open Sans';
   font-style: italic;
   font-weight: 400;
-  src: url('../fonts/open-sans-v18-latin_cyrillic-italic.woff2') format('woff2'), 
+  src: url('../fonts/open-sans-v18-latin_cyrillic-italic.woff2') format('woff2'),
       url('../fonts/open-sans-v18-latin_cyrillic-italic.woff') format('woff');
 }
 /* open-sans-600 - latin_cyrillic */
@@ -19,7 +19,7 @@
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
-  src: url('../fonts/open-sans-v18-latin_cyrillic-600.woff2') format('woff2'), 
+  src: url('../fonts/open-sans-v18-latin_cyrillic-600.woff2') format('woff2'),
       url('../fonts/open-sans-v18-latin_cyrillic-600.woff') format('woff');
 }
 /* open-sans-700 - latin_cyrillic */
@@ -27,14 +27,12 @@
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/open-sans-v18-latin_cyrillic-700.woff2') format('woff2'), 
+  src: url('../fonts/open-sans-v18-latin_cyrillic-700.woff2') format('woff2'),
       url('../fonts/open-sans-v18-latin_cyrillic-700.woff') format('woff');
 }
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 body {
@@ -299,7 +297,7 @@ button {
 }
 
 .select__icon::after {
-  right: 4px;
+  right: 5px;
   top: 50%;
   transform: translateY(-50%) rotate(45deg);
 }
@@ -681,7 +679,7 @@ button {
 .gallery__filter-block {
   height: 100%;
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
 }
 
 .gallery__filter {
@@ -762,7 +760,7 @@ button {
 .gallery-select__header:hover .select__icon::after,
 .gallery-select__header:focus .select__icon::before,
 .gallery-select__header:focus .select__icon::after,
-.gallery-select.is-active .select__icon::before, 
+.gallery-select.is-active .select__icon::before,
 .gallery-select.is-active .select__icon::after {
   background: #9D5CD0;
 }
@@ -774,21 +772,17 @@ button {
 
 .gallery-select__body {
   width: 100%;
-  height: 300px;
-  background-color: rgba(0, 0, 0, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
+  min-height: 80px;
+  height: 100%;
+  background-color: transparent;
   display: none;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   position: absolute;
-  padding-top: 10px;
-  padding-bottom: 10px;
   top: 40px;
   right: 0;
-  overflow: hidden;
+  overflow: visible;
   transition-property: display, border-color;
   transition-duration: .3s;
   transition-timing-function: ease;
@@ -831,6 +825,7 @@ button {
 
 .gallery__input {
   height: 40px;
+  width: 100%;
   border: 1px solid #999;
   background: transparent;
   padding-left: 20px;
@@ -1029,7 +1024,7 @@ button {
 .gallery__link-img {
   display: flex;
   width: 100%;
-  position: relative; 
+  position: relative;
   max-height: 350px;
   max-width: 350px;
 }
@@ -1107,7 +1102,6 @@ button {
 
 .catalog__lang-item.ui-state-focus {
   outline: none;
-  filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
 }
 
 .catalog__lang-btn {
@@ -1118,9 +1112,10 @@ button {
   transition: filter 0.3s ease;
   width: 46px;
   height: 46px;
+  background-color: transparent;
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   outline: none;
 }
 
@@ -1147,6 +1142,10 @@ button {
 .catalog__lang-btn:hover,
 .catalog__lang-btn:focus {
   filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
+}
+
+.catalog__lang-btn:focus {
+  outline: none;
 }
 
 .catalog__lang-btn::before {
@@ -1192,6 +1191,14 @@ button {
 
 .catalog__lang-btn.is-active:active::before {
   border-color: transparent;
+}
+
+.catalog__lang-block {
+  display: none;
+}
+
+.catalog__lang-block.is-active {
+  display: block;
 }
 
 .catalog__desc {
@@ -1345,15 +1352,17 @@ button {
   width: 200px;
 }
 
-.catalog__painters-link {
+.catalog__painters-btn {
   cursor: pointer !important;
   color: #333;
   display: inline-block;
   position: relative;
   transition: color .3s ease;
+  background-color: transparent;
+  padding: 0;
 }
 
-.catalog__painters-link::before {
+.catalog__painters-btn::before {
   content: '';
   position: absolute;
   display: block;
@@ -1366,25 +1375,25 @@ button {
   transform: translateX(-50%);
 }
 
-.catalog__painters-link.is-active {
+.catalog__painters-btn.is-active {
   color: #C283F3;
 }
 
-.catalog__painters-link:hover,
-.catalog__painters-link:focus {
+.catalog__painters-btn:hover,
+.catalog__painters-btn:focus {
   color: #C283F3;
 }
 
-.catalog__painters-link:hover::before,
-.catalog__painters-link:focus::before {
+.catalog__painters-btn:hover::before,
+.catalog__painters-btn:focus::before {
   width: 100%;
 }
 
-.catalog__painters-link:active {
+.catalog__painters-btn:active {
   color: #9D5CD0;
 }
 
-.catalog__painters-link:active::before {
+.catalog__painters-btn:active::before {
   width: 100%;
   background: #9D5CD0;
 }
@@ -2524,7 +2533,7 @@ button {
   }
 
   .header__menu {
-    transform: translateY(-101%);
+    transform: translateY(-1001%);
     transition: transform .3s ease;
   }
 
@@ -2593,10 +2602,10 @@ button {
     content: '';
     position: absolute;
     height: 2px;
-    width: 10px;
+    width: 8px;
     background-color: #FFF;
     left: -6px;
-    bottom: -2px;
+    bottom: -3px;
     transform: rotate(135deg);
     transition: background-color .3s ease;
   }
@@ -3026,7 +3035,7 @@ button {
     width: 16px;
   }
 
-  .header__menu--dropped:hover::after, 
+  .header__menu--dropped:hover::after,
   .header__menu--dropped:focus::after {
     width: 13px;
   }
@@ -3103,7 +3112,7 @@ button {
   .gallery__block {
     margin-right: 0;
     max-width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 118px;
   }
 
   .gallery__filter {
@@ -3230,11 +3239,6 @@ button {
     display: block
   }
 
-  .card__img {
-    height: auto;
-    min-height: 200px;
-  }
-
   .card__caption {
     padding: 15px 10px 45px 27px;
   }
@@ -3347,7 +3351,7 @@ button {
   .ui-accordion-header-active.ui-state-active.accordion__title::after {
     transform: translateY(-50%) rotate(45deg);
   }
-  
+
   .editions__category-list {
     max-height: none;
     margin-bottom: 20px;
@@ -3526,7 +3530,7 @@ button {
     border: none;
     padding-left: 15px;
   }
-  
+
   .feedback__address.mobile {
     display: block;
     order: 0;
@@ -3626,7 +3630,7 @@ button {
   .footer__logo-link {
     order: 1;
   }
-  
+
   .footer__list {
     order: 0;
     margin-bottom: 20px;

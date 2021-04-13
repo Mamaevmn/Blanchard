@@ -9,6 +9,13 @@ let heroSlider = new Swiper('#hero__slider', {
   autoplay: {
     delay: 2500,
   },
+  preloadImages: false,
+  lazy: {
+    loadOnTransitionStart: false,
+    loadPrevNext: false,
+  },
+  watchSlidesProgress: true,
+  watchSlidesVisibility: true,
   a11y: {
     enable: false,
   }
@@ -36,22 +43,24 @@ let gallerySlider = new Swiper('#gallery__slider', {
   observer: true,
   observeParents: true,
   observeSlideChildren: true,
-  slidesPerColumnFill: 'row',
   grabCursor: true,
   breakpoints: {
     1600: {
+      slidesPerColumnFill: 'row',
       slidesPerView: 3,
       slidesPerColumn: 2,
       spaceBetween: 50,
       slidesPerGroup: 3,
     },
     768: {
+      slidesPerColumnFill: 'row',
       slidesPerView: 2,
       slidesPerColumn: 2,
       spaceBetween: 34,
       slidesPerGroup: 2,
     },
     320: {
+      slidesPerColumnFill: 'column',
       slidesPerView: 1,
       loop: true,
     },

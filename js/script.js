@@ -1,53 +1,37 @@
-// для блока Gallery 
+// для блока Gallery
 function galleryFilterForm (value) {
   // берет значение введенное в поле input для дальнейшего использования в фильтре
   if (value !== '') console.log(value);
 }
 
 // для блока Catalog
-let catalogLangItem = document.querySelectorAll('.catalog__lang-item');
-let catalogLangBtn = document.querySelectorAll('.catalog__lang-btn');
-let catalogPainters = document.querySelectorAll('.catalog__painters-item');
+let catalogPainterBtn = document.querySelectorAll('.catalog__painters-btn');
 
-catalogLangItem.forEach(item =>{
-  item.addEventListener('click', function(event) {
-    let target = event.target;
-    console.log(target)
+catalogPainterBtn.forEach(painter => {
+  painter.addEventListener('click', function(e) {
 
-    target.classList.add('is-active')
+    let target = e.target;
+    let targetPath = e.target.dataset.path;
+    let catalogPaintersItemArray = target.closest('.catalog__painters-list').children;
+    let activeLangBlock = document.querySelector('.catalog__lang-block.is-active');
+    let activeCatalogBiographyItem = activeLangBlock.querySelectorAll('.catalog__biography-item');
 
-    for (let btn of catalogLangBtn) {
-      if (btn.classList.contains('is-active') && target !== btn) {
-        btn.classList.remove('is-active');
+    for (let item of catalogPaintersItemArray) {
+      let btnItem = item.querySelector('.catalog__painters-btn');
+
+      if (btnItem.classList.contains('is-active')) {
+        btnItem.classList.remove('is-active');
       }
     }
+
+    activeCatalogBiographyItem.forEach(bioItem => {
+      bioItem.classList.remove('is-active');
+    });
+
+    target.classList.add('is-active');
+    document.querySelector(`[data-target="${targetPath}"]`).classList.add('is-active');
   })
 })
-
-catalogPainters.forEach(el =>{
-  el.addEventListener('click', function(event) {
-    let target = event.target;
-    let idTargetLink = target.getAttribute('id').substr(5);
-
-    if (target.tagName === 'A' && !target.classList.contains('is-active')) {
-      let catalogPaintersItem = target.parentNode.parentNode.children;
-
-      for (let item of catalogPaintersItem) {
-        let itemLink = item.querySelector('.catalog__painters-link');
-
-        if (itemLink.classList.contains('is-active')) {
-          let currentIdTargetLink = itemLink.getAttribute('id').substr(5);
-
-          document.getElementById(currentIdTargetLink).classList.remove('is-active');
-          itemLink.classList.remove('is-active');
-        }
-      }
-
-      target.classList.add('is-active');
-      document.getElementById(idTargetLink).classList.add('is-active');
-    }
-  })
-});
 
 // для блока Event
 let eventBtn = document.querySelector('.events__allevents-btn');
@@ -73,27 +57,27 @@ eventBtn.addEventListener('click', function() {
 
 window.addEventListener('resize', function() {
   let resizeWindow = [window.innerWidth];
-  
+
   if (resizeWindow > 767) {
     if (resizeWindow >= 1024 && !eventItem[2].classList.contains('is-active') && (eventBtn.style.display = "block")) {
       eventItem[2].classList.add('is-active');
     }
-  
+
     if (!(resizeWindow < 768) && resizeWindow >= 768 && eventItem[3].classList.contains('is-active') && (eventBtn.style.display = "none")) {
       for (let item in eventItem) {
         if (item > 2) {
           eventItem[item].classList.remove('is-active')
-  
+
           eventBtn.style.display = "block";
         }
       }
     }
-  
+
     if (resizeWindow >= 768 && resizeWindow < 1024 && eventItem[2].classList.contains('is-active') && (eventBtn.style.display = "none")) {
       for (let item in eventItem) {
         if (item > 1) {
           eventItem[item].classList.remove('is-active')
-  
+
           eventBtn.style.display = "block";
         }
       }
@@ -121,7 +105,7 @@ function changeClassCategoryItem (target, name) {
 function changeCheckedInputAccordion (target, name) {
   for (let input of accordionCategoryInput) {
     let parentTarget = target.parentNode.parentNode;
-    
+
     if (input.name === name) {
       input.checked = target.checked;
       parentTarget.classList.toggle('checked');
@@ -220,7 +204,7 @@ function validatePriceFilterInput (evt) {
   }
 }
 
-// для блока Projects 
+// для блока Projects
 let tooltip = document.querySelectorAll('.tooltip');
 
 tooltip.forEach(tooltip => {

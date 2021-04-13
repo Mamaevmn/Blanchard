@@ -192,26 +192,26 @@
         <ul class="hero__swiper-wrapper">
           <li class="hero__swiper-slide">
             <picture class="hero__swiper-img">
-              <source class="swiper__img" srcset="image/picture/hero/1_1024.jpg" media="(min-width: 1024px) and (max-width: 1659px)">
-              <source class="swiper__img" srcset="image/picture/hero/1_768.jpg" media="(min-width: 768px) and (max-width: 1023px)">
-              <source class="swiper__img" srcset="image/picture/hero/1_mobile.jpg" media="(max-width: 767px)">
-              <img class="swiper__img" src="image/picture/hero/1_1920.jpg" alt="">
+              <source class="swiper__img swiper-lazy" srcset="image/loadicon/1x1.png" data-srcset="image/picture/hero/1_1024.jpg" media="(min-width: 1024px) and (max-width: 1659px)">
+              <source class="swiper__img swiper-lazy" srcset="image/loadicon/1x1.png" data-srcset="image/picture/hero/1_768.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+              <source class="swiper__img swiper-lazy" srcset="image/loadicon/1x1.png" data-srcset="image/picture/hero/1_mobile.jpg" media="(max-width: 767px)">
+              <img class="swiper__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/hero/1_1920.jpg" alt="">
             </picture>
           </li>
           <li class="hero__swiper-slide">
             <picture class="hero__swiper-img">
-              <source class="swiper__img" srcset="image/picture/hero/2_1024.jpg" media="(min-width: 1024px) and (max-width: 1659px)">
-              <source class="swiper__img" srcset="image/picture/hero/2_768.jpg" media="(min-width: 768px) and (max-width: 1023px)">
-              <source class="swiper__img" srcset="image/picture/hero/2_mobile.jpg" media="(max-width: 767px)">
-              <img class="swiper__img" src="image/picture/hero/2_1920.jpg" alt="">
+              <source class="swiper__img swiper-lazy" srcset="image/loadicon/1x1.png" data-srcset="image/picture/hero/2_1024.jpg" media="(min-width: 1024px) and (max-width: 1659px)">
+              <source class="swiper__img swiper-lazy" srcset="image/loadicon/1x1.png" data-srcset="image/picture/hero/2_768.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+              <source class="swiper__img swiper-lazy" srcset="image/loadicon/1x1.png" data-srcset="image/picture/hero/2_mobile.jpg" media="(max-width: 767px)">
+              <img class="swiper__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/hero/2_1920.jpg" alt="">
             </picture>
           </li>
           <li class="hero__swiper-slide">
             <picture class="hero__swiper-img">
-              <source class="swiper__img" srcset="image/picture/hero/3_1024.jpg" media="(min-width: 1024px) and (max-width: 1659px)">
-              <source class="swiper__img" srcset="image/picture/hero/3_768.jpg" media="(min-width: 768px) and (max-width: 1023px)">
-              <source class="swiper__img" srcset="image/picture/hero/3_mobile.jpg" media="(max-width: 767px)">
-              <img class="swiper__img" src="image/picture/hero/3_1920.jpg" alt="">
+              <source class="swiper__img swiper-lazy" srcset="image/loadicon/1x1.png" data-srcset="image/picture/hero/3_1024.jpg" media="(min-width: 1024px) and (max-width: 1659px)">
+              <source class="swiper__img swiper-lazy" srcset="image/loadicon/1x1.png" data-srcset="image/picture/hero/3_768.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+              <source class="swiper__img swiper-lazy" srcset="image/loadicon/1x1.png" data-srcset="image/picture/hero/3_mobile.jpg" media="(max-width: 767px)">
+              <img class="swiper__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/hero/3_1920.jpg" alt="">
             </picture>
           </li>
         </ul>
@@ -257,53 +257,22 @@
                 <div class="gallery-select__body">
                   <ul class="select__scroll-block">
                     <li class="gallery-select__item">
-                      <a href="#!" class="gallery-select__item-link">
-                        Бенедетто ди Биндо
-                      </a>
+                      <label for="trend" class="hidden"></label>
+                      <input id="trend" type="text" class="gallery__input trend" placeholder="Направление" onchange="galleryFilterForm(this.value)">
                     </li>
                     <li class="gallery-select__item">
-                      <a href="#!" class="gallery-select__item-link">
-                        Бергоньоне, Амброджо 
-                      </a>
-                    </li>
-                    <li class="gallery-select__item">
-                      <a href="#!" class="gallery-select__item-link">
-                        Биссоло, Франческо 
-                      </a>
-                    </li>
-                    <li class="gallery-select__item">
-                      <a href="#!" class="gallery-select__item-link">
-                        Больтраффио, Джованни 
-                      </a>
-                    </li>
-                    <li class="gallery-select__item">
-                      <a href="#!" class="gallery-select__item-link">
-                        Бонсиньори, Франческо 
-                      </a>
-                    </li>
-                    <li class="gallery-select__item">
-                      <a href="#!" class="gallery-select__item-link">
-                        Боттичини, Рафаэлло
-                      </a>
-                    </li>
-                    <li class="gallery-select__item">
-                      <a href="#!" class="gallery-select__item-link">
-                        Брамантино
-                      </a>
+                      <label for="technic" class="hidden"></label>
+                      <input id="technic" type="text" class="gallery__input technic" placeholder="Техника" onchange="galleryFilterForm(this.value)">
                     </li>
                   </ul>
                 </div>
               </div>
-              <label for="trend" class="hidden"></label>
-              <input id="trend" type="text" class="gallery__input trend" placeholder="Направление" onchange="galleryFilterForm(this.value)">
-              <label for="technic" class="hidden"></label>
-              <input id="technic" type="text" class="gallery__input technic" placeholder="Техника" onchange="galleryFilterForm(this.value)">
             </div>
-          </div>    
+          </div>
           <div class="gallery__description gallery__description--large">
-            Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний 
-            <a href="#!" class="gallery__auth">авторизуйтесь</a>, либо воспользуйтесь лицензией. 
-          </div>      
+            Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
+            <a href="#!" class="gallery__auth">авторизуйтесь</a>, либо воспользуйтесь лицензией.
+          </div>
         </div>
         <div id="gallery__slider" class="gallery__slider-container">
           <div class="gallery__navigation-btns">
@@ -314,164 +283,164 @@
           <ul class="gallery__list">
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/1.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/1.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/2.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/2.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/3.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/3.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/4.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/4.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/5.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/5.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/6.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/6.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/7.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/7.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/8.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/8.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/9.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/9.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/10.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/10.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/11.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/11.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/12.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/12.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/13.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/13.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/14.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/14.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/15.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/15.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/16.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/16.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/17.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/17.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/18.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/18.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/19.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/19.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/20.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/20.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/21.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/21.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/22.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/22.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/23.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/23.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/24.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/24.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/25.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/25.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/26.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/26.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/27.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/27.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/28.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/28.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/29.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/29.jpg" alt="Описание к картине">
               </a>
             </li>
             <li class="gallery__item">
               <a class="gallery__link-img" href="#!">
-                  <img class="gallery__img swiper-lazy" src="image/loadicon/loadicon.gif" data-src="image/picture/gallery/30.jpg" alt="Описание к картине">
+                  <img class="gallery__img swiper-lazy" src="image/loadicon/1x1.png" data-src="image/picture/gallery/30.jpg" alt="Описание к картине">
               </a>
             </li>
           </ul>
         </div>
         <div class="gallery__description gallery__description--mobile">
-          Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний 
-          <a href="#!" class="gallery__auth">авторизуйтесь</a>, либо воспользуйтесь лицензией. 
-        </div> 
+          Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
+          <a href="#!" class="gallery__auth">авторизуйтесь</a>, либо воспользуйтесь лицензией.
+        </div>
         <div id="zoom-popup" class="popup">
           <span id="popup__close" class="popup__close-btn">&times;</span>
           <div class="popup__caption">
-            <img id="popup__img" class="popup__img" src="image/loadicon/loadicon.gif" alt="Сюда автоматически вставляется описание к открываемому изображению">
+            <img id="popup__img" class="popup__img" src="image/loadicon/1x1.png" alt="Сюда автоматически вставляется описание к открываемому изображению">
             <p id="popup__desc" class="popup__desc"></p>
           </div>
         </div>
@@ -485,49 +454,34 @@
           </h2>
           <ul class="catalog__lang-list">
             <li class="catalog__lang-item">
-              <a href="#fr" class="catalog__lang-btn btn-fr">
-              </a>
+              <button class="catalog__lang-btn btn-fr" data-path="fr" title="french language">
+              </button>
             </li>
             <li class="catalog__lang-item">
-              <a href="#ge" class="catalog__lang-btn btn-ge">
-              </a>
+              <button class="catalog__lang-btn btn-ge" data-path="ge" title="german language">
+              </button>
             </li>
             <li class="catalog__lang-item">
-              <a href="#it" class="catalog__lang-btn btn-it">
-              </a>
+              <button class="catalog__lang-btn btn-it" data-path="it" title="italian language">
+              </button>
             </li>
             <li class="catalog__lang-item">
-              <a href="#ru" class="catalog__lang-btn is-active btn-ru">
-              </a>
+              <button class="catalog__lang-btn is-active btn-ru" data-path="ru" title="russian language">
+              </button>
             </li>
             <li class="catalog__lang-item">
-              <a href="#be" class="catalog__lang-btn btn-be">
-              </a>
+              <button class="catalog__lang-btn btn-be" data-path="be" title="dutch language">
+              </button>
             </li>
           </ul>
         </div>
-        <div id="fr" class="catalog__lang-block">
+        <div class="catalog__lang-block" data-target="fr">
           <p class="catalog__desc">
             Les actionnaires des plus grandes entreprises, qui représentent un exemple frappant du type continental-européen de culture politique, seront déclarés violant les normes universelles d'éthique et de moralité. En tant qu'élément seulement de la vue d'ensemble, cherchant à supplanter la fabrication traditionnelle, la nanotechnologie reste à ce jour le lot des libéraux désireux d'être fonctionnellement dispersés en éléments indépendants.
           </p>
-        </div>
-        <div id="ge" class="catalog__lang-block">
-          <p class="catalog__desc">
-            Die Aktionäre der größten Unternehmen, die ein anschauliches Beispiel für die kontinentaleuropäische Art der politischen Kultur darstellen, werden als Verstoß gegen die universellen Normen der Ethik und Moral erklärt. Als einziger Teil des Gesamtbildes, das die traditionelle Fertigung ersetzen will, bleibt die Nanotechnologie bis heute das Los vieler Liberaler, die bestrebt sind, funktional in unabhängige Elemente aufgeteilt zu werden.
-          </p>
-        </div>
-        <div id="it" class="catalog__lang-block">
-          <p class="catalog__desc">
-            Gli azionisti delle maggiori società, che rappresentano un vivido esempio della cultura politica di tipo continentale-europeo, saranno dichiarati violatori delle norme universali di etica e moralità. Come solo una parte del quadro generale, che cerca di soppiantare la produzione tradizionale, la nanotecnologia rimane ancora oggi il destino dei liberali desiderosi di essere funzionalmente dispersi in elementi indipendenti.
-          </p>
-        </div>
-        <div id="ru" class="catalog__lang-block">
-          <p class="catalog__desc">
-            Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы. 
-          </p>
           <div class="catalog__painters">
             <ul class="catalog__biography-list">
-              <li class="catalog__biography-item" id="benedetto--ru">
+              <li class="catalog__biography-item" data-target="benedetto--fr">
                 <img src="image/picture/catalog/benedetto.jpg" alt="Бенедетто ди Биндо" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Бенедетто ди Биндо
@@ -539,7 +493,7 @@
                   Бенедетто ди Биндо остался в истории искусства как сиенский художник, так сказать, «второго ряда», несмотря на то, что за свою короткую жизнь он выполнил ряд весьма престижных заказов, включая работы в Сиенском соборе (работы в главном соборе республики второстепенным художникам не поручались). Обучение он прошёл у Таддео ди Бартоло, крупного сиенского мастера поздней готики, в боттеге которого Бенедетто трудился вместе с Грегорио ди Чекко. Наибольшее влияние на его творчество оказали работы Симоне Мартини, в частности в выборе колорита, а тонко проработанные лица его персонажей напоминают произведения Джованни да Милано.
                 </p>
               </li>
-              <li class="catalog__biography-item" id="bergognone--ru">
+              <li class="catalog__biography-item" data-target="bergognone--fr">
                 <img src="image/picture/catalog/bergognone.jpg" alt="Амброджо Бергоньоне" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Амброджо Бергоньоне
@@ -552,7 +506,7 @@
                   Его завещание датировано 4 апреля 1523, в том же году он умер. Одним из его учеников считают Бернардино Луини.
                 </p>
               </li>
-              <li class="catalog__biography-item" id="bissolo--ru">
+              <li class="catalog__biography-item" data-target="bissolo--fr">
                 <img src="image/picture/catalog/bissolo.jpg" alt="Франческо Биссоло" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Франческо Биссоло
@@ -567,7 +521,7 @@
                   Работы художника хранятся ныне во многих музеях мира. В санкт-петербургском Эрмитаже находится его картина «Богоматерь с Младенцем Христом». В Британской Национальной галерее — «Мадонна с Младенцем со святыми и донатором». Ряд его полотен находится в музеях Варшавы, Лос-Анджелеса (Музей Нортона Саймона и Los Angeles County Museum of Art), Дэйтоновском институте искусств (штат Огайо, США) и др.
                 </p>
               </li>
-              <li class="catalog__biography-item" id="boltraffio--ru">
+              <li class="catalog__biography-item" data-target="boltraffio--fr">
                 <img src="image/picture/catalog/boltraffio.jpg" alt="Джованни Антонио Больтраффио (Бельтраффио)" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Джованни Антонио Больтраффио (Бельтраффио)
@@ -577,11 +531,11 @@
                 </span>
                 <p class="catalog__painter-bio">
                   Вазари сообщает, что художник происходил из аристократической семьи. Воспитанный в традициях Фоппы, Бернардо Дзенале и Амброджо Бергоньоне, он прошёл обучение в мастерской Леонардо. Его первое произведение «Воскресение Христа, святой Леонард и святая Лючия» выполнено в 1491 году совместно с Марко д'Оджоно для миланской церкви Сан-Джованни-сул-Муро. Был придворным художником Лодовико Моро и славился своими психологическими портретами.
-                  Больтраффио умер в возрасте 49 лет и был похоронен на кладбище церкви Св. Паулы в Комито.                  
+                  Больтраффио умер в возрасте 49 лет и был похоронен на кладбище церкви Св. Паулы в Комито.
                   Некоторые искусствоведы предполагают, что фигура младенца на картине Леонардо да Винчи «Мадонна Литта» принадлежит кисти Джованни Антонио Больтраффио. Известны подготовительные рисунки Джованни Антонио Больтраффио, в точности воспроизводящие эту фигуру.
                 </p>
               </li>
-              <li class="catalog__biography-item" id="bonsignori--ru">
+              <li class="catalog__biography-item" data-target="bonsignori--fr">
                 <img src="image/picture/catalog/bonsignori.jpg" alt="Франческо Бонсиньори" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Франческо Бонсиньори
@@ -594,7 +548,7 @@
                   Среди известных творений этого периода самыми ранними произведениями художника являются полотна «Мадонна со спящим младенцем» 1483 года и «Алтарь Даль Бово», или «Мадонна на троне с предстоящими святыми и донатором Альтабеллой Авогадро» 1484 года, которые ныне входят в собрание Общественного музея Вероны.
                 </p>
               </li>
-              <li class="catalog__biography-item" id="botticini--ru">
+              <li class="catalog__biography-item" data-target="botticini--fr">
                 <img src="image/picture/catalog/botticini.jpg" alt="Рафаэль Боттичини" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Рафаэль Боттичини
@@ -606,7 +560,7 @@
                   Рафаэлло принадлежал к флорентийской артистической династии — его дед, Джованни ди Доменико, был известен как художник, расписывавший игральные карты (хотя учёные не исключают, что он мог заниматься и более серьёзной живописью); его отец — Франческо ди Джованни, был известным флорентийским мастером. Первые художественные навыки Рафаэлло получил в мастерской отца; с этой мастерской связан и ранний период его творчества. В 1490-е годы, когда формировался художественный вкус Рафаэлло, мастерская его отца занималась в основном исполнением заказов в провинциальных городках в окрестностях Флоренции. В 1498 году Франческо Боттичини скончался, Рафаэлло унаследовал мастерскую и продолжил работать в провинции. По мнению исследователей его творчества, это был художник скромного дарования, никогда не стремившийся завоевать высоких позиций в интеллектуальном и финансовом центре Тосканы — Флоренции, и довольствовавшийся заказами, которые ему давали провинциальные храмы. Его искусство было эклектичным, и наряду с влиянием отца включало связь с искусством Перуджино, Ридольфо Гирландайо, Лоренцо ди Креди, Фра Бартоломео и др.
                 </p>
               </li>
-              <li class="catalog__biography-item" id="bramantino--ru">
+              <li class="catalog__biography-item" data-target="bramantino--fr">
                 <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
@@ -618,7 +572,7 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="brea--ru">
+              <li class="catalog__biography-item" data-target="brea--fr">
                 <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
@@ -630,7 +584,7 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="tucci--ru">
+              <li class="catalog__biography-item" data-target="tucci--fr">
                 <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
@@ -642,7 +596,7 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="vecchietta--ru">
+              <li class="catalog__biography-item" data-target="vecchietta--fr">
                 <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
@@ -654,7 +608,7 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="verrocchio--ru">
+              <li class="catalog__biography-item" data-target="verrocchio--fr">
                 <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
@@ -666,7 +620,7 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item is-active" id="domenico--ru">
+              <li class="catalog__biography-item is-active" data-target="domenico--fr">
                 <img src="image/picture/catalog/domenico.jpg" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Доменико Гирландайо
@@ -678,7 +632,7 @@
                   Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
                 </p>
               </li>
-              <li class="catalog__biography-item" id="gozzoli--ru">
+              <li class="catalog__biography-item" data-target="gozzoli--fr">
                 <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
@@ -690,7 +644,7 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="granacci--ru">
+              <li class="catalog__biography-item" data-target="granacci--fr">
                 <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
@@ -702,7 +656,7 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="gregorio-di-cecco--ru">
+              <li class="catalog__biography-item" id="gregoriodata-targeti-cecco--fr">
                 <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
@@ -714,7 +668,7 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="giovanni-da-udine--ru">
+              <li class="catalog__biography-item" id="giovannidata-targeta-udine--fr">
                 <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
@@ -726,7 +680,7 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="giovanni-di-paolo--ru">
+              <li class="catalog__biography-item" id="giovannidata-targeti-paolo--fr">
                 <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
@@ -738,7 +692,7 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="giorgione--ru">
+              <li class="catalog__biography-item" data-target="giorgione--fr">
                 <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
@@ -750,7 +704,7 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="parentino--ru">
+              <li class="catalog__biography-item" data-target="parentino--fr">
                 <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
@@ -762,7 +716,7 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="pesellino--ru">
+              <li class="catalog__biography-item" data-target="pesellino--fr">
                 <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
@@ -774,7 +728,7 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="perugino--ru">
+              <li class="catalog__biography-item" data-target="perugino--fr">
                 <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
@@ -786,7 +740,7 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="peruzzi--ru">
+              <li class="catalog__biography-item" data-target="peruzzi--fr">
                 <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
@@ -798,7 +752,7 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="pisanello--ru">
+              <li class="catalog__biography-item" data-target="pisanello--fr">
                 <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
@@ -810,7 +764,1372 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
                 </p>
               </li>
-              <li class="catalog__biography-item" id="pinturicchio--ru">
+              <li class="catalog__biography-item" data-target="pinturicchio--fr">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+            </ul>
+            <ul class="catalog__ages-list">
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">De 1400 à 1499</h3>
+                <ul class="catalog__painters-list">
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="benedetto--fr">
+                      Бенедетто ди Биндо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="bergognone--fr">
+                      Бергоньоне, Амброджо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="bissolo--fr">
+                      Биссоло, Франческо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="boltraffio--fr">
+                      Больтраффио, Джованни
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="bonsignori--fr">
+                      Бонсиньори, Франческо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="botticini--fr">
+                      Боттичини, Рафаэлло
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="bramantino--fr">
+                      Брамантино
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="brea--fr">
+                      Бреа, Людовико
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="tucci--fr">
+                      Бьяджо д’Антонио Туччи
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="vecchietta--fr">
+                      Веккьетта
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="verrocchio--fr">
+                      Андреа Верроккьо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn is-active" data-path="domenico--fr">
+                      Доменико Гирландайо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="gozzoli--fr">
+                      Беноццо Гоццоли
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="granacci--fr">
+                      Граначчи, Франческо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="btn-gregiocecco--fr">
+                      Грегорио ди Чекко
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="btn-giovniudine--fr">
+                      Джованни да Удине
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="btn-giovnipaolo--fr">
+                      Джованни ди Паоло
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="giorgione--fr">
+                      Джорджоне
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="parentino--fr">
+                      Парентино, Бернардо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="pesellino--fr">
+                      Пезеллино
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="perugino--fr">
+                      Пьетро Перуджино
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="peruzzi--fr">
+                      Перуцци, Бальдассаре
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="pisanello--fr">
+                      Пизанелло
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="pinturicchio--fr">
+                      Пинтуриккьо
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">De 1500 à 1599</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </li>
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">De 1600 à 1699</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </li>
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">De 1700 à 1799</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </li>
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">De 1800 à 1899</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </li>
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">De 1900 à 1999</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </li>
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">Depuis 2000</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="catalog__lang-block" data-target="ge">
+          <p class="catalog__desc">
+            Die Aktionäre der größten Unternehmen, die ein anschauliches Beispiel für die kontinentaleuropäische Art der politischen Kultur darstellen, werden als Verstoß gegen die universellen Normen der Ethik und Moral erklärt. Als einziger Teil des Gesamtbildes, das die traditionelle Fertigung ersetzen will, bleibt die Nanotechnologie bis heute das Los vieler Liberaler, die bestrebt sind, funktional in unabhängige Elemente aufgeteilt zu werden.
+          </p>
+          <div class="catalog__painters">
+            <ul class="catalog__biography-list">
+              <li class="catalog__biography-item" data-target="benedetto--ge">
+                <img src="image/picture/catalog/benedetto.jpg" alt="Бенедетто ди Биндо" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Бенедетто ди Биндо
+                </h3>
+                <span class="catalog__painter-ages">
+                  1380—85 — 19 сентября 1417
+                </span>
+                <p class="catalog__painter-bio">
+                  Бенедетто ди Биндо остался в истории искусства как сиенский художник, так сказать, «второго ряда», несмотря на то, что за свою короткую жизнь он выполнил ряд весьма престижных заказов, включая работы в Сиенском соборе (работы в главном соборе республики второстепенным художникам не поручались). Обучение он прошёл у Таддео ди Бартоло, крупного сиенского мастера поздней готики, в боттеге которого Бенедетто трудился вместе с Грегорио ди Чекко. Наибольшее влияние на его творчество оказали работы Симоне Мартини, в частности в выборе колорита, а тонко проработанные лица его персонажей напоминают произведения Джованни да Милано.
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="bergognone--ge">
+                <img src="image/picture/catalog/bergognone.jpg" alt="Амброджо Бергоньоне" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Амброджо Бергоньоне
+                </h3>
+                <span class="catalog__painter-ages">
+                  1453 — 1523
+                </span>
+                <p class="catalog__painter-bio">
+                  Прозвище говорит о его тяготении к бургундской школе, по манере ему близок Винченцо Фоппа. Испытал влияние Леонардо да Винчи. Наиболее известен работами 1486—1494 в монастырской обители картезианцев Чертоза ди Павия. Позднее работал в Милане в базилике Сант-Эусторджо и церкви Сан-Сатиро, после 1497 — в Лоди, в 1512 — в Бергамо, незадолго до смерти — снова в Милане, в базилике Сан-Симпличано.
+                  Его завещание датировано 4 апреля 1523, в том же году он умер. Одним из его учеников считают Бернардино Луини.
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="bissolo--ge">
+                <img src="image/picture/catalog/bissolo.jpg" alt="Франческо Биссоло" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Франческо Биссоло
+                </h3>
+                <span class="catalog__painter-ages">
+                  1470 или 1472 — 20 апреля 1554
+                </span>
+                <p class="catalog__painter-bio">
+                  Сын художника. Ученик Джованни Беллини. С 1490 переехал в мастерскую Беллини. С 1492 по 1530 год работал в Венеции. Помогал учителю в работе над украшением Большого зала Совета Дворца дожей (Венеция). Принимал участие в создании украшений Церкви Иль Реденторе в Венеции.
+                  Художник эпохи Возрождения.
+                  В своём творчестве подражал Джорджоне.
+                  Работы художника хранятся ныне во многих музеях мира. В санкт-петербургском Эрмитаже находится его картина «Богоматерь с Младенцем Христом». В Британской Национальной галерее — «Мадонна с Младенцем со святыми и донатором». Ряд его полотен находится в музеях Варшавы, Лос-Анджелеса (Музей Нортона Саймона и Los Angeles County Museum of Art), Дэйтоновском институте искусств (штат Огайо, США) и др.
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="boltraffio--ge">
+                <img src="image/picture/catalog/boltraffio.jpg" alt="Джованни Антонио Больтраффио (Бельтраффио)" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Джованни Антонио Больтраффио (Бельтраффио)
+                </h3>
+                <span class="catalog__painter-ages">
+                  1466 или 1467 — 1516
+                </span>
+                <p class="catalog__painter-bio">
+                  Вазари сообщает, что художник происходил из аристократической семьи. Воспитанный в традициях Фоппы, Бернардо Дзенале и Амброджо Бергоньоне, он прошёл обучение в мастерской Леонардо. Его первое произведение «Воскресение Христа, святой Леонард и святая Лючия» выполнено в 1491 году совместно с Марко д'Оджоно для миланской церкви Сан-Джованни-сул-Муро. Был придворным художником Лодовико Моро и славился своими психологическими портретами.
+                  Больтраффио умер в возрасте 49 лет и был похоронен на кладбище церкви Св. Паулы в Комито.
+                  Некоторые искусствоведы предполагают, что фигура младенца на картине Леонардо да Винчи «Мадонна Литта» принадлежит кисти Джованни Антонио Больтраффио. Известны подготовительные рисунки Джованни Антонио Больтраффио, в точности воспроизводящие эту фигуру.
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="bonsignori--ge">
+                <img src="image/picture/catalog/bonsignori.jpg" alt="Франческо Бонсиньори" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Франческо Бонсиньори
+                </h3>
+                <span class="catalog__painter-ages">
+                  1460 — 2 июля 1519
+                </span>
+                <p class="catalog__painter-bio">
+                  Родился около 1460 года в Вероне в семье художника Альберто Бонсиньори. Обучался живописи в мастерской Франческо Бенальо. В 1480 году переехал из Вероны в Венецию, где жил до 1487 года. В ранний период творчества находился под влиянием венецианской живописной школы. Особенное впечатление на Бонсиньори оказало творчество Антонелло да Мессины, Джованни Беллини, Чима да Конельяно и Альвизе Виварини.
+                  Среди известных творений этого периода самыми ранними произведениями художника являются полотна «Мадонна со спящим младенцем» 1483 года и «Алтарь Даль Бово», или «Мадонна на троне с предстоящими святыми и донатором Альтабеллой Авогадро» 1484 года, которые ныне входят в собрание Общественного музея Вероны.
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="botticini--ge">
+                <img src="image/picture/catalog/botticini.jpg" alt="Рафаэль Боттичини" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Рафаэль Боттичини
+                </h3>
+                <span class="catalog__painter-ages">
+                  11 сентября 1477 — известен до 1520 года
+                </span>
+                <p class="catalog__painter-bio">
+                  Рафаэлло принадлежал к флорентийской артистической династии — его дед, Джованни ди Доменико, был известен как художник, расписывавший игральные карты (хотя учёные не исключают, что он мог заниматься и более серьёзной живописью); его отец — Франческо ди Джованни, был известным флорентийским мастером. Первые художественные навыки Рафаэлло получил в мастерской отца; с этой мастерской связан и ранний период его творчества. В 1490-е годы, когда формировался художественный вкус Рафаэлло, мастерская его отца занималась в основном исполнением заказов в провинциальных городках в окрестностях Флоренции. В 1498 году Франческо Боттичини скончался, Рафаэлло унаследовал мастерскую и продолжил работать в провинции. По мнению исследователей его творчества, это был художник скромного дарования, никогда не стремившийся завоевать высоких позиций в интеллектуальном и финансовом центре Тосканы — Флоренции, и довольствовавшийся заказами, которые ему давали провинциальные храмы. Его искусство было эклектичным, и наряду с влиянием отца включало связь с искусством Перуджино, Ридольфо Гирландайо, Лоренцо ди Креди, Фра Бартоломео и др.
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="bramantino--ge">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="brea--ge">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="tucci--ge">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="vecchietta--ge">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="verrocchio--ge">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item is-active" data-target="domenico--ge">
+                <img src="image/picture/catalog/domenico.jpg" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Доменико Гирландайо
+                </h3>
+                <span class="catalog__painter-ages">
+                  2 июня 1448 — 11 января 1494
+                </span>
+                <p class="catalog__painter-bio">
+                  Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="gozzoli--ge">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="granacci--ge">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" id="gregoriodata-targeti-cecco--ge">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" id="giovannidata-targeta-udine--ge">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" id="giovannidata-targeti-paolo--ge">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="giorgione--ge">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="parentino--ge">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="pesellino--ge">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="perugino--ge">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="peruzzi--ge">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="pisanello--ge">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="pinturicchio--ge">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+            </ul>
+            <ul class="catalog__ages-list">
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">Von 1400 bis 1499</h3>
+                <ul class="catalog__painters-list">
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="benedetto--ge">
+                      Бенедетто ди Биндо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="bergognone--ge">
+                      Бергоньоне, Амброджо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="bissolo--ge">
+                      Биссоло, Франческо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="boltraffio--ge">
+                      Больтраффио, Джованни
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="bonsignori--ge">
+                      Бонсиньори, Франческо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="botticini--ge">
+                      Боттичини, Рафаэлло
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="bramantino--ge">
+                      Брамантино
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="brea--ge">
+                      Бреа, Людовико
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="tucci--ge">
+                      Бьяджо д’Антонио Туччи
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="vecchietta--ge">
+                      Веккьетта
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="verrocchio--ge">
+                      Андреа Верроккьо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn is-active" data-path="domenico--ge">
+                      Доменико Гирландайо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="gozzoli--ge">
+                      Беноццо Гоццоли
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="granacci--ge">
+                      Граначчи, Франческо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="btn-gregiocecco--ge">
+                      Грегорио ди Чекко
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="btn-giovniudine--ge">
+                      Джованни да Удине
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="btn-giovnipaolo--ge">
+                      Джованни ди Паоло
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="giorgione--ge">
+                      Джорджоне
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="parentino--ge">
+                      Парентино, Бернардо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="pesellino--ge">
+                      Пезеллино
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="perugino--ge">
+                      Пьетро Перуджино
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="peruzzi--ge">
+                      Перуцци, Бальдассаре
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="pisanello--ge">
+                      Пизанелло
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="pinturicchio--ge">
+                      Пинтуриккьо
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">Von 1500 bis 1599</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </li>
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">Von 1600 bis 1699</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </li>
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">Von 1700 bis 1799</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </li>
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">Von 1800 bis 1899</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </li>
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">Von 1900 bis 1999</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </li>
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">Seit 1400</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="catalog__lang-block" data-target="it">
+          <p class="catalog__desc">
+            Gli azionisti delle maggiori società, che rappresentano un vivido esempio della cultura politica di tipo continentale-europeo, saranno dichiarati violatori delle norme universali di etica e moralità. Come solo una parte del quadro generale, che cerca di soppiantare la produzione tradizionale, la nanotecnologia rimane ancora oggi il destino dei liberali desiderosi di essere funzionalmente dispersi in elementi indipendenti.
+          </p>
+          <div class="catalog__painters">
+            <ul class="catalog__biography-list">
+              <li class="catalog__biography-item" data-target="benedetto--it">
+                <img src="image/picture/catalog/benedetto.jpg" alt="Бенедетто ди Биндо" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Бенедетто ди Биндо
+                </h3>
+                <span class="catalog__painter-ages">
+                  1380—85 — 19 сентября 1417
+                </span>
+                <p class="catalog__painter-bio">
+                  Бенедетто ди Биндо остался в истории искусства как сиенский художник, так сказать, «второго ряда», несмотря на то, что за свою короткую жизнь он выполнил ряд весьма престижных заказов, включая работы в Сиенском соборе (работы в главном соборе республики второстепенным художникам не поручались). Обучение он прошёл у Таддео ди Бартоло, крупного сиенского мастера поздней готики, в боттеге которого Бенедетто трудился вместе с Грегорио ди Чекко. Наибольшее влияние на его творчество оказали работы Симоне Мартини, в частности в выборе колорита, а тонко проработанные лица его персонажей напоминают произведения Джованни да Милано.
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="bergognone--it">
+                <img src="image/picture/catalog/bergognone.jpg" alt="Амброджо Бергоньоне" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Амброджо Бергоньоне
+                </h3>
+                <span class="catalog__painter-ages">
+                  1453 — 1523
+                </span>
+                <p class="catalog__painter-bio">
+                  Прозвище говорит о его тяготении к бургундской школе, по манере ему близок Винченцо Фоппа. Испытал влияние Леонардо да Винчи. Наиболее известен работами 1486—1494 в монастырской обители картезианцев Чертоза ди Павия. Позднее работал в Милане в базилике Сант-Эусторджо и церкви Сан-Сатиро, после 1497 — в Лоди, в 1512 — в Бергамо, незадолго до смерти — снова в Милане, в базилике Сан-Симпличано.
+                  Его завещание датировано 4 апреля 1523, в том же году он умер. Одним из его учеников считают Бернардино Луини.
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="bissolo--it">
+                <img src="image/picture/catalog/bissolo.jpg" alt="Франческо Биссоло" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Франческо Биссоло
+                </h3>
+                <span class="catalog__painter-ages">
+                  1470 или 1472 — 20 апреля 1554
+                </span>
+                <p class="catalog__painter-bio">
+                  Сын художника. Ученик Джованни Беллини. С 1490 переехал в мастерскую Беллини. С 1492 по 1530 год работал в Венеции. Помогал учителю в работе над украшением Большого зала Совета Дворца дожей (Венеция). Принимал участие в создании украшений Церкви Иль Реденторе в Венеции.
+                  Художник эпохи Возрождения.
+                  В своём творчестве подражал Джорджоне.
+                  Работы художника хранятся ныне во многих музеях мира. В санкт-петербургском Эрмитаже находится его картина «Богоматерь с Младенцем Христом». В Британской Национальной галерее — «Мадонна с Младенцем со святыми и донатором». Ряд его полотен находится в музеях Варшавы, Лос-Анджелеса (Музей Нортона Саймона и Los Angeles County Museum of Art), Дэйтоновском институте искусств (штат Огайо, США) и др.
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="boltraffio--it">
+                <img src="image/picture/catalog/boltraffio.jpg" alt="Джованни Антонио Больтраффио (Бельтраффио)" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Джованни Антонио Больтраффио (Бельтраффио)
+                </h3>
+                <span class="catalog__painter-ages">
+                  1466 или 1467 — 1516
+                </span>
+                <p class="catalog__painter-bio">
+                  Вазари сообщает, что художник происходил из аристократической семьи. Воспитанный в традициях Фоппы, Бернардо Дзенале и Амброджо Бергоньоне, он прошёл обучение в мастерской Леонардо. Его первое произведение «Воскресение Христа, святой Леонард и святая Лючия» выполнено в 1491 году совместно с Марко д'Оджоно для миланской церкви Сан-Джованни-сул-Муро. Был придворным художником Лодовико Моро и славился своими психологическими портретами.
+                  Больтраффио умер в возрасте 49 лет и был похоронен на кладбище церкви Св. Паулы в Комито.
+                  Некоторые искусствоведы предполагают, что фигура младенца на картине Леонардо да Винчи «Мадонна Литта» принадлежит кисти Джованни Антонио Больтраффио. Известны подготовительные рисунки Джованни Антонио Больтраффио, в точности воспроизводящие эту фигуру.
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="bonsignori--it">
+                <img src="image/picture/catalog/bonsignori.jpg" alt="Франческо Бонсиньори" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Франческо Бонсиньори
+                </h3>
+                <span class="catalog__painter-ages">
+                  1460 — 2 июля 1519
+                </span>
+                <p class="catalog__painter-bio">
+                  Родился около 1460 года в Вероне в семье художника Альберто Бонсиньори. Обучался живописи в мастерской Франческо Бенальо. В 1480 году переехал из Вероны в Венецию, где жил до 1487 года. В ранний период творчества находился под влиянием венецианской живописной школы. Особенное впечатление на Бонсиньори оказало творчество Антонелло да Мессины, Джованни Беллини, Чима да Конельяно и Альвизе Виварини.
+                  Среди известных творений этого периода самыми ранними произведениями художника являются полотна «Мадонна со спящим младенцем» 1483 года и «Алтарь Даль Бово», или «Мадонна на троне с предстоящими святыми и донатором Альтабеллой Авогадро» 1484 года, которые ныне входят в собрание Общественного музея Вероны.
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="botticini--it">
+                <img src="image/picture/catalog/botticini.jpg" alt="Рафаэль Боттичини" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Рафаэль Боттичини
+                </h3>
+                <span class="catalog__painter-ages">
+                  11 сентября 1477 — известен до 1520 года
+                </span>
+                <p class="catalog__painter-bio">
+                  Рафаэлло принадлежал к флорентийской артистической династии — его дед, Джованни ди Доменико, был известен как художник, расписывавший игральные карты (хотя учёные не исключают, что он мог заниматься и более серьёзной живописью); его отец — Франческо ди Джованни, был известным флорентийским мастером. Первые художественные навыки Рафаэлло получил в мастерской отца; с этой мастерской связан и ранний период его творчества. В 1490-е годы, когда формировался художественный вкус Рафаэлло, мастерская его отца занималась в основном исполнением заказов в провинциальных городках в окрестностях Флоренции. В 1498 году Франческо Боттичини скончался, Рафаэлло унаследовал мастерскую и продолжил работать в провинции. По мнению исследователей его творчества, это был художник скромного дарования, никогда не стремившийся завоевать высоких позиций в интеллектуальном и финансовом центре Тосканы — Флоренции, и довольствовавшийся заказами, которые ему давали провинциальные храмы. Его искусство было эклектичным, и наряду с влиянием отца включало связь с искусством Перуджино, Ридольфо Гирландайо, Лоренцо ди Креди, Фра Бартоломео и др.
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="bramantino--it">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="brea--it">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="tucci--it">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="vecchietta--it">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="verrocchio--it">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item is-active" data-target="domenico--it">
+                <img src="image/picture/catalog/domenico.jpg" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Доменико Гирландайо
+                </h3>
+                <span class="catalog__painter-ages">
+                  2 июня 1448 — 11 января 1494
+                </span>
+                <p class="catalog__painter-bio">
+                  Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="gozzoli--it">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="granacci--it">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" id="gregoriodata-targeti-cecco--it">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" id="giovannidata-targeta-udine--it">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" id="giovannidata-targeti-paolo--it">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="giorgione--it">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="parentino--it">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="pesellino--it">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="perugino--it">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="peruzzi--it">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="pisanello--it">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="pinturicchio--it">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+            </ul>
+            <ul class="catalog__ages-list">
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">Dal 1400 al 1499</h3>
+                <ul class="catalog__painters-list">
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="benedetto--it">
+                      Бенедетто ди Биндо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="bergognone--it">
+                      Бергоньоне, Амброджо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="bissolo--it">
+                      Биссоло, Франческо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="boltraffio--it">
+                      Больтраффио, Джованни
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="bonsignori--it">
+                      Бонсиньори, Франческо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="botticini--it">
+                      Боттичини, Рафаэлло
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="bramantino--it">
+                      Брамантино
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="brea--it">
+                      Бреа, Людовико
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="tucci--it">
+                      Бьяджо д’Антонио Туччи
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="vecchietta--it">
+                      Веккьетта
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="verrocchio--it">
+                      Андреа Верроккьо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn is-active" data-path="domenico--it">
+                      Доменико Гирландайо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="gozzoli--it">
+                      Беноццо Гоццоли
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="granacci--it">
+                      Граначчи, Франческо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="btn-gregiocecco--it">
+                      Грегорио ди Чекко
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="btn-giovniudine--it">
+                      Джованни да Удине
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="btn-giovnipaolo--it">
+                      Джованни ди Паоло
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="giorgione--it">
+                      Джорджоне
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="parentino--it">
+                      Парентино, Бернардо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="pesellino--it">
+                      Пезеллино
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="perugino--it">
+                      Пьетро Перуджино
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="peruzzi--it">
+                      Перуцци, Бальдассаре
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="pisanello--it">
+                      Пизанелло
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="pinturicchio--it">
+                      Пинтуриккьо
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">Dal 1500 al 1599</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </li>
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">Dal 1600 al 1699</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </li>
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">Dal 1700 al 1799</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </li>
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">Dal 1800 al 1899</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </li>
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">Dal 1900 al 1999</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </li>
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">Dal 1400</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="catalog__lang-block is-active" data-target="ru">
+          <p class="catalog__desc">
+            Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.
+          </p>
+          <div class="catalog__painters">
+            <ul class="catalog__biography-list">
+              <li class="catalog__biography-item" data-target="benedetto--ru">
+                <img src="image/picture/catalog/benedetto.jpg" alt="Бенедетто ди Биндо" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Бенедетто ди Биндо
+                </h3>
+                <span class="catalog__painter-ages">
+                  1380—85 — 19 сентября 1417
+                </span>
+                <p class="catalog__painter-bio">
+                  Бенедетто ди Биндо остался в истории искусства как сиенский художник, так сказать, «второго ряда», несмотря на то, что за свою короткую жизнь он выполнил ряд весьма престижных заказов, включая работы в Сиенском соборе (работы в главном соборе республики второстепенным художникам не поручались). Обучение он прошёл у Таддео ди Бартоло, крупного сиенского мастера поздней готики, в боттеге которого Бенедетто трудился вместе с Грегорио ди Чекко. Наибольшее влияние на его творчество оказали работы Симоне Мартини, в частности в выборе колорита, а тонко проработанные лица его персонажей напоминают произведения Джованни да Милано.
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="bergognone--ru">
+                <img src="image/picture/catalog/bergognone.jpg" alt="Амброджо Бергоньоне" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Амброджо Бергоньоне
+                </h3>
+                <span class="catalog__painter-ages">
+                  1453 — 1523
+                </span>
+                <p class="catalog__painter-bio">
+                  Прозвище говорит о его тяготении к бургундской школе, по манере ему близок Винченцо Фоппа. Испытал влияние Леонардо да Винчи. Наиболее известен работами 1486—1494 в монастырской обители картезианцев Чертоза ди Павия. Позднее работал в Милане в базилике Сант-Эусторджо и церкви Сан-Сатиро, после 1497 — в Лоди, в 1512 — в Бергамо, незадолго до смерти — снова в Милане, в базилике Сан-Симпличано.
+                  Его завещание датировано 4 апреля 1523, в том же году он умер. Одним из его учеников считают Бернардино Луини.
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="bissolo--ru">
+                <img src="image/picture/catalog/bissolo.jpg" alt="Франческо Биссоло" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Франческо Биссоло
+                </h3>
+                <span class="catalog__painter-ages">
+                  1470 или 1472 — 20 апреля 1554
+                </span>
+                <p class="catalog__painter-bio">
+                  Сын художника. Ученик Джованни Беллини. С 1490 переехал в мастерскую Беллини. С 1492 по 1530 год работал в Венеции. Помогал учителю в работе над украшением Большого зала Совета Дворца дожей (Венеция). Принимал участие в создании украшений Церкви Иль Реденторе в Венеции.
+                  Художник эпохи Возрождения.
+                  В своём творчестве подражал Джорджоне.
+                  Работы художника хранятся ныне во многих музеях мира. В санкт-петербургском Эрмитаже находится его картина «Богоматерь с Младенцем Христом». В Британской Национальной галерее — «Мадонна с Младенцем со святыми и донатором». Ряд его полотен находится в музеях Варшавы, Лос-Анджелеса (Музей Нортона Саймона и Los Angeles County Museum of Art), Дэйтоновском институте искусств (штат Огайо, США) и др.
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="boltraffio--ru">
+                <img src="image/picture/catalog/boltraffio.jpg" alt="Джованни Антонио Больтраффио (Бельтраффио)" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Джованни Антонио Больтраффио (Бельтраффио)
+                </h3>
+                <span class="catalog__painter-ages">
+                  1466 или 1467 — 1516
+                </span>
+                <p class="catalog__painter-bio">
+                  Вазари сообщает, что художник происходил из аристократической семьи. Воспитанный в традициях Фоппы, Бернардо Дзенале и Амброджо Бергоньоне, он прошёл обучение в мастерской Леонардо. Его первое произведение «Воскресение Христа, святой Леонард и святая Лючия» выполнено в 1491 году совместно с Марко д'Оджоно для миланской церкви Сан-Джованни-сул-Муро. Был придворным художником Лодовико Моро и славился своими психологическими портретами.
+                  Больтраффио умер в возрасте 49 лет и был похоронен на кладбище церкви Св. Паулы в Комито.
+                  Некоторые искусствоведы предполагают, что фигура младенца на картине Леонардо да Винчи «Мадонна Литта» принадлежит кисти Джованни Антонио Больтраффио. Известны подготовительные рисунки Джованни Антонио Больтраффио, в точности воспроизводящие эту фигуру.
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="bonsignori--ru">
+                <img src="image/picture/catalog/bonsignori.jpg" alt="Франческо Бонсиньори" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Франческо Бонсиньори
+                </h3>
+                <span class="catalog__painter-ages">
+                  1460 — 2 июля 1519
+                </span>
+                <p class="catalog__painter-bio">
+                  Родился около 1460 года в Вероне в семье художника Альберто Бонсиньори. Обучался живописи в мастерской Франческо Бенальо. В 1480 году переехал из Вероны в Венецию, где жил до 1487 года. В ранний период творчества находился под влиянием венецианской живописной школы. Особенное впечатление на Бонсиньори оказало творчество Антонелло да Мессины, Джованни Беллини, Чима да Конельяно и Альвизе Виварини.
+                  Среди известных творений этого периода самыми ранними произведениями художника являются полотна «Мадонна со спящим младенцем» 1483 года и «Алтарь Даль Бово», или «Мадонна на троне с предстоящими святыми и донатором Альтабеллой Авогадро» 1484 года, которые ныне входят в собрание Общественного музея Вероны.
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="botticini--ru">
+                <img src="image/picture/catalog/botticini.jpg" alt="Рафаэль Боттичини" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Рафаэль Боттичини
+                </h3>
+                <span class="catalog__painter-ages">
+                  11 сентября 1477 — известен до 1520 года
+                </span>
+                <p class="catalog__painter-bio">
+                  Рафаэлло принадлежал к флорентийской артистической династии — его дед, Джованни ди Доменико, был известен как художник, расписывавший игральные карты (хотя учёные не исключают, что он мог заниматься и более серьёзной живописью); его отец — Франческо ди Джованни, был известным флорентийским мастером. Первые художественные навыки Рафаэлло получил в мастерской отца; с этой мастерской связан и ранний период его творчества. В 1490-е годы, когда формировался художественный вкус Рафаэлло, мастерская его отца занималась в основном исполнением заказов в провинциальных городках в окрестностях Флоренции. В 1498 году Франческо Боттичини скончался, Рафаэлло унаследовал мастерскую и продолжил работать в провинции. По мнению исследователей его творчества, это был художник скромного дарования, никогда не стремившийся завоевать высоких позиций в интеллектуальном и финансовом центре Тосканы — Флоренции, и довольствовавшийся заказами, которые ему давали провинциальные храмы. Его искусство было эклектичным, и наряду с влиянием отца включало связь с искусством Перуджино, Ридольфо Гирландайо, Лоренцо ди Креди, Фра Бартоломео и др.
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="bramantino--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="brea--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="tucci--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="vecchietta--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="verrocchio--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item is-active" data-target="domenico--ru">
+                <img src="image/picture/catalog/domenico.jpg" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Доменико Гирландайо
+                </h3>
+                <span class="catalog__painter-ages">
+                  2 июня 1448 — 11 января 1494
+                </span>
+                <p class="catalog__painter-bio">
+                  Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="gozzoli--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="granacci--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" id="gregoriodata-targeti-cecco--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" id="giovannidata-targeta-udine--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" id="giovannidata-targeti-paolo--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="giorgione--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="parentino--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="pesellino--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="perugino--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="peruzzi--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="pisanello--ru">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="pinturicchio--ru">
                 <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
                 <h3 class="catalog__name">
                   Lorem, ipsum.
@@ -828,152 +2147,608 @@
                 <h3 class="catalog__ages-title">C 1400 по 1499 гг.</h3>
                 <ul class="catalog__painters-list">
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" id="link-benedetto--ru" tabindex="0">
+                    <button class="catalog__painters-btn" data-path="benedetto--ru">
                       Бенедетто ди Биндо
-                    </a>
+                    </button>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" id="link-bergognone--ru" tabindex="0">
+                    <button class="catalog__painters-btn" data-path="bergognone--ru">
                       Бергоньоне, Амброджо
-                    </a>
+                    </button>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" id="link-bissolo--ru" tabindex="0">
-                      Биссоло, Франческо                      
-                    </a>
+                    <button class="catalog__painters-btn" data-path="bissolo--ru">
+                      Биссоло, Франческо
+                    </button>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" id="link-boltraffio--ru" tabindex="0">
-                      Больтраффио, Джованни                   
-                    </a>
+                    <button class="catalog__painters-btn" data-path="boltraffio--ru">
+                      Больтраффио, Джованни
+                    </button>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" id="link-bonsignori--ru" tabindex="0">
-                      Бонсиньори, Франческо                  
-                    </a>
+                    <button class="catalog__painters-btn" data-path="bonsignori--ru">
+                      Бонсиньори, Франческо
+                    </button>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" id="link-botticini--ru" tabindex="0">
+                    <button class="catalog__painters-btn" data-path="botticini--ru">
                       Боттичини, Рафаэлло
-                    </a>
+                    </button>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" id="link-bramantino--ru" tabindex="0">
-                      Брамантино            
-                    </a>
+                    <button class="catalog__painters-btn" data-path="bramantino--ru">
+                      Брамантино
+                    </button>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" id="link-brea--ru" tabindex="0">
+                    <button class="catalog__painters-btn" data-path="brea--ru">
                       Бреа, Людовико
-                    </a>
+                    </button>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" id="link-tucci--ru" tabindex="0">
+                    <button class="catalog__painters-btn" data-path="tucci--ru">
                       Бьяджо д’Антонио Туччи
-                    </a>
+                    </button>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" id="link-vecchietta--ru" tabindex="0">
+                    <button class="catalog__painters-btn" data-path="vecchietta--ru">
                       Веккьетта
-                    </a>
+                    </button>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" id="link-verrocchio--ru" tabindex="0">
+                    <button class="catalog__painters-btn" data-path="verrocchio--ru">
                       Андреа Верроккьо
-                    </a>
+                    </button>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link is-active" id="link-domenico--ru" tabindex="0">
-                      Доменико Гирландайо                   
-                    </a>
+                    <button class="catalog__painters-btn is-active" data-path="domenico--ru">
+                      Доменико Гирландайо
+                    </button>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" id="link-gozzoli--ru" tabindex="0">
-                      Беноццо Гоццоли                 
-                    </a>
+                    <button class="catalog__painters-btn" data-path="gozzoli--ru">
+                      Беноццо Гоццоли
+                    </button>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" id="link-granacci--ru" tabindex="0">
+                    <button class="catalog__painters-btn" data-path="granacci--ru">
                       Граначчи, Франческо
-                    </a>
+                    </button>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" id="link-gregorio-di-cecco--ru" tabindex="0">
-                      Грегорио ди Чекко             
-                    </a>
+                    <button class="catalog__painters-btn" data-path="btn-gregiocecco--ru">
+                      Грегорио ди Чекко
+                    </button>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" id="link-giovanni-da-udine--ru" tabindex="0">
+                    <button class="catalog__painters-btn" data-path="btn-giovniudine--ru">
                       Джованни да Удине
-                    </a>
+                    </button>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" id="link-giovanni-di-paolo--ru" tabindex="0">
+                    <button class="catalog__painters-btn" data-path="btn-giovnipaolo--ru">
                       Джованни ди Паоло
-                    </a>
+                    </button>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" id="link-giorgione--ru" tabindex="0">
+                    <button class="catalog__painters-btn" data-path="giorgione--ru">
                       Джорджоне
-                    </a>
+                    </button>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" id="link-parentino--ru" tabindex="0">
+                    <button class="catalog__painters-btn" data-path="parentino--ru">
                       Парентино, Бернардо
-                    </a>
+                    </button>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" id="link-pesellino--ru" tabindex="0">
+                    <button class="catalog__painters-btn" data-path="pesellino--ru">
                       Пезеллино
-                    </a>
+                    </button>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" id="link-perugino--ru" tabindex="0">
+                    <button class="catalog__painters-btn" data-path="perugino--ru">
                       Пьетро Перуджино
-                    </a>
+                    </button>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" id="link-peruzzi--ru" tabindex="0">
+                    <button class="catalog__painters-btn" data-path="peruzzi--ru">
                       Перуцци, Бальдассаре
-                    </a>
+                    </button>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" id="link-pisanello--ru" tabindex="0">
+                    <button class="catalog__painters-btn" data-path="pisanello--ru">
                       Пизанелло
-                    </a>
+                    </button>
                   </li>
                   <li class="catalog__painters-item">
-                    <a class="catalog__painters-link" id="link-pinturicchio--ru" tabindex="0">
+                    <button class="catalog__painters-btn" data-path="pinturicchio--ru">
                       Пинтуриккьо
-                    </a>
+                    </button>
                   </li>
                 </ul>
               </li>
               <li class="catalog__ages-item">
                 <h3 class="catalog__ages-title">C 1500 по 1599 гг.</h3>
+                <p>Lorem, ipsum dolor.</p>
               </li>
               <li class="catalog__ages-item">
                 <h3 class="catalog__ages-title">C 1600 по 1699 гг.</h3>
+                <p>Lorem, ipsum dolor.</p>
               </li>
               <li class="catalog__ages-item">
                 <h3 class="catalog__ages-title">C 1700 по 1799 гг.</h3>
+                <p>Lorem, ipsum dolor.</p>
               </li>
               <li class="catalog__ages-item">
                 <h3 class="catalog__ages-title">C 1800 по 1899 гг.</h3>
+                <p>Lorem, ipsum dolor.</p>
               </li>
               <li class="catalog__ages-item">
                 <h3 class="catalog__ages-title">C 1900 по 1999 гг.</h3>
+                <p>Lorem, ipsum dolor.</p>
               </li>
               <li class="catalog__ages-item">
                 <h3 class="catalog__ages-title">C 2000 г.</h3>
+                <p>Lorem, ipsum dolor.</p>
               </li>
             </ul>
           </div>
         </div>
-        <div id="be" class="catalog__lang-block">
+        <div class="catalog__lang-block" data-target="be">
           <p class="catalog__desc">
             De aandeelhouders van de grootste bedrijven, die een levendig voorbeeld zijn van het continentaal-Europese type politieke cultuur, zullen worden verklaard in strijd met de universele normen van ethiek en moraliteit. Als slechts een deel van het grote plaatje, dat de traditionele productie probeert te vervangen, blijft nanotechnologie tot op de dag van vandaag het lot van liberalen die graag functioneel verspreid willen worden in onafhankelijke elementen.
           </p>
+          <div class="catalog__painters">
+            <ul class="catalog__biography-list">
+              <li class="catalog__biography-item" data-target="benedetto--be">
+                <img src="image/picture/catalog/benedetto.jpg" alt="Бенедетто ди Биндо" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Бенедетто ди Биндо
+                </h3>
+                <span class="catalog__painter-ages">
+                  1380—85 — 19 сентября 1417
+                </span>
+                <p class="catalog__painter-bio">
+                  Бенедетто ди Биндо остался в истории искусства как сиенский художник, так сказать, «второго ряда», несмотря на то, что за свою короткую жизнь он выполнил ряд весьма престижных заказов, включая работы в Сиенском соборе (работы в главном соборе республики второстепенным художникам не поручались). Обучение он прошёл у Таддео ди Бартоло, крупного сиенского мастера поздней готики, в боттеге которого Бенедетто трудился вместе с Грегорио ди Чекко. Наибольшее влияние на его творчество оказали работы Симоне Мартини, в частности в выборе колорита, а тонко проработанные лица его персонажей напоминают произведения Джованни да Милано.
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="bergognone--be">
+                <img src="image/picture/catalog/bergognone.jpg" alt="Амброджо Бергоньоне" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Амброджо Бергоньоне
+                </h3>
+                <span class="catalog__painter-ages">
+                  1453 — 1523
+                </span>
+                <p class="catalog__painter-bio">
+                  Прозвище говорит о его тяготении к бургундской школе, по манере ему близок Винченцо Фоппа. Испытал влияние Леонардо да Винчи. Наиболее известен работами 1486—1494 в монастырской обители картезианцев Чертоза ди Павия. Позднее работал в Милане в базилике Сант-Эусторджо и церкви Сан-Сатиро, после 1497 — в Лоди, в 1512 — в Бергамо, незадолго до смерти — снова в Милане, в базилике Сан-Симпличано.
+                  Его завещание датировано 4 апреля 1523, в том же году он умер. Одним из его учеников считают Бернардино Луини.
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="bissolo--be">
+                <img src="image/picture/catalog/bissolo.jpg" alt="Франческо Биссоло" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Франческо Биссоло
+                </h3>
+                <span class="catalog__painter-ages">
+                  1470 или 1472 — 20 апреля 1554
+                </span>
+                <p class="catalog__painter-bio">
+                  Сын художника. Ученик Джованни Беллини. С 1490 переехал в мастерскую Беллини. С 1492 по 1530 год работал в Венеции. Помогал учителю в работе над украшением Большого зала Совета Дворца дожей (Венеция). Принимал участие в создании украшений Церкви Иль Реденторе в Венеции.
+                  Художник эпохи Возрождения.
+                  В своём творчестве подражал Джорджоне.
+                  Работы художника хранятся ныне во многих музеях мира. В санкт-петербургском Эрмитаже находится его картина «Богоматерь с Младенцем Христом». В Британской Национальной галерее — «Мадонна с Младенцем со святыми и донатором». Ряд его полотен находится в музеях Варшавы, Лос-Анджелеса (Музей Нортона Саймона и Los Angeles County Museum of Art), Дэйтоновском институте искусств (штат Огайо, США) и др.
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="boltraffio--be">
+                <img src="image/picture/catalog/boltraffio.jpg" alt="Джованни Антонио Больтраффио (Бельтраффио)" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Джованни Антонио Больтраффио (Бельтраффио)
+                </h3>
+                <span class="catalog__painter-ages">
+                  1466 или 1467 — 1516
+                </span>
+                <p class="catalog__painter-bio">
+                  Вазари сообщает, что художник происходил из аристократической семьи. Воспитанный в традициях Фоппы, Бернардо Дзенале и Амброджо Бергоньоне, он прошёл обучение в мастерской Леонардо. Его первое произведение «Воскресение Христа, святой Леонард и святая Лючия» выполнено в 1491 году совместно с Марко д'Оджоно для миланской церкви Сан-Джованни-сул-Муро. Был придворным художником Лодовико Моро и славился своими психологическими портретами.
+                  Больтраффио умер в возрасте 49 лет и был похоронен на кладбище церкви Св. Паулы в Комито.
+                  Некоторые искусствоведы предполагают, что фигура младенца на картине Леонардо да Винчи «Мадонна Литта» принадлежит кисти Джованни Антонио Больтраффио. Известны подготовительные рисунки Джованни Антонио Больтраффио, в точности воспроизводящие эту фигуру.
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="bonsignori--be">
+                <img src="image/picture/catalog/bonsignori.jpg" alt="Франческо Бонсиньори" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Франческо Бонсиньори
+                </h3>
+                <span class="catalog__painter-ages">
+                  1460 — 2 июля 1519
+                </span>
+                <p class="catalog__painter-bio">
+                  Родился около 1460 года в Вероне в семье художника Альберто Бонсиньори. Обучался живописи в мастерской Франческо Бенальо. В 1480 году переехал из Вероны в Венецию, где жил до 1487 года. В ранний период творчества находился под влиянием венецианской живописной школы. Особенное впечатление на Бонсиньори оказало творчество Антонелло да Мессины, Джованни Беллини, Чима да Конельяно и Альвизе Виварини.
+                  Среди известных творений этого периода самыми ранними произведениями художника являются полотна «Мадонна со спящим младенцем» 1483 года и «Алтарь Даль Бово», или «Мадонна на троне с предстоящими святыми и донатором Альтабеллой Авогадро» 1484 года, которые ныне входят в собрание Общественного музея Вероны.
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="botticini--be">
+                <img src="image/picture/catalog/botticini.jpg" alt="Рафаэль Боттичини" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Рафаэль Боттичини
+                </h3>
+                <span class="catalog__painter-ages">
+                  11 сентября 1477 — известен до 1520 года
+                </span>
+                <p class="catalog__painter-bio">
+                  Рафаэлло принадлежал к флорентийской артистической династии — его дед, Джованни ди Доменико, был известен как художник, расписывавший игральные карты (хотя учёные не исключают, что он мог заниматься и более серьёзной живописью); его отец — Франческо ди Джованни, был известным флорентийским мастером. Первые художественные навыки Рафаэлло получил в мастерской отца; с этой мастерской связан и ранний период его творчества. В 1490-е годы, когда формировался художественный вкус Рафаэлло, мастерская его отца занималась в основном исполнением заказов в провинциальных городках в окрестностях Флоренции. В 1498 году Франческо Боттичини скончался, Рафаэлло унаследовал мастерскую и продолжил работать в провинции. По мнению исследователей его творчества, это был художник скромного дарования, никогда не стремившийся завоевать высоких позиций в интеллектуальном и финансовом центре Тосканы — Флоренции, и довольствовавшийся заказами, которые ему давали провинциальные храмы. Его искусство было эклектичным, и наряду с влиянием отца включало связь с искусством Перуджино, Ридольфо Гирландайо, Лоренцо ди Креди, Фра Бартоломео и др.
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="bramantino--be">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="brea--be">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="tucci--be">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="vecchietta--be">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="verrocchio--be">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item is-active" data-target="domenico--be">
+                <img src="image/picture/catalog/domenico.jpg" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Доменико Гирландайо
+                </h3>
+                <span class="catalog__painter-ages">
+                  2 июня 1448 — 11 января 1494
+                </span>
+                <p class="catalog__painter-bio">
+                  Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="gozzoli--be">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="granacci--be">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" id="gregoriodata-targeti-cecco--be">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" id="giovannidata-targeta-udine--be">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" id="giovannidata-targeti-paolo--be">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="giorgione--be">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="parentino--be">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="pesellino--be">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="perugino--be">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="peruzzi--be">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="pisanello--be">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+              <li class="catalog__biography-item" data-target="pinturicchio--be">
+                <img src="image/picture/catalog/empty-img.png" alt="Lorem, ipsum" class="catalog__painter-photo">
+                <h3 class="catalog__name">
+                  Lorem, ipsum.
+                </h3>
+                <span class="catalog__painter-ages">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <p class="catalog__painter-bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae distinctio culpa praesentium delectus repellendus recusandae aspernatur dolorum inventore et. Hic consequuntur facere corporis ipsum nostrum blanditiis illo est obcaecati?
+                </p>
+              </li>
+            </ul>
+            <ul class="catalog__ages-list">
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">Van 1400 tot 1499</h3>
+                <ul class="catalog__painters-list">
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="benedetto--be">
+                      Бенедетто ди Биндо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="bergognone--be">
+                      Бергоньоне, Амброджо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="bissolo--be">
+                      Биссоло, Франческо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="boltraffio--be">
+                      Больтраффио, Джованни
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="bonsignori--be">
+                      Бонсиньори, Франческо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="botticini--be">
+                      Боттичини, Рафаэлло
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="bramantino--be">
+                      Брамантино
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="brea--be">
+                      Бреа, Людовико
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="tucci--be">
+                      Бьяджо д’Антонио Туччи
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="vecchietta--be">
+                      Веккьетта
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="verrocchio--be">
+                      Андреа Верроккьо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn is-active" data-path="domenico--be">
+                      Доменико Гирландайо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="gozzoli--be">
+                      Беноццо Гоццоли
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="granacci--be">
+                      Граначчи, Франческо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="btn-gregiocecco--be">
+                      Грегорио ди Чекко
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="btn-giovniudine--be">
+                      Джованни да Удине
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="btn-giovnipaolo--be">
+                      Джованни ди Паоло
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="giorgione--be">
+                      Джорджоне
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="parentino--be">
+                      Парентино, Бернардо
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="pesellino--be">
+                      Пезеллино
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="perugino--be">
+                      Пьетро Перуджино
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="peruzzi--be">
+                      Перуцци, Бальдассаре
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="pisanello--be">
+                      Пизанелло
+                    </button>
+                  </li>
+                  <li class="catalog__painters-item">
+                    <button class="catalog__painters-btn" data-path="pinturicchio--be">
+                      Пинтуриккьо
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">Van 1500 tot 1599</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </li>
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">Van 1600 tot 1699</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </li>
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">Van 1700 tot 1799</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </li>
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">Van 1800 tot 1899</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </li>
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">Van 1900 tot 1999</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </li>
+              <li class="catalog__ages-item">
+                <h3 class="catalog__ages-title">Sinds 1400</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -1422,7 +3197,7 @@
           <ul class="editions__product-list">
             <li class="editions__product-item">
               <div class="product">
-                <img src="image/loadicon/loadicon.gif" data-src="image/picture/editions/1.jpg" alt="Иттен, Иоханнес. Искусство цвета" class="product__img swiper-lazy">
+                <img src="image/loadicon/1x1.png" data-src="image/picture/editions/1.jpg" alt="Иттен, Иоханнес. Искусство цвета" class="product__img swiper-lazy">
                 <div class="product__name-price">
                   <p class="product__title">
                     Искусство цвета
@@ -1432,14 +3207,14 @@
                   </span>
                 </div>
                 <p class="product__author">
-                  Иттен, Иоханнес 
+                  Иттен, Иоханнес
                 </p>
                 <button class="product__btn focus-visible-btn">Заказать</button>
               </div>
             </li>
             <li class="editions__product-item">
               <div class="product">
-                <img src="image/loadicon/loadicon.gif" data-src="image/picture/editions/2.jpg" alt="Рудер, Эмиль. Типографика" class="product__img swiper-lazy">
+                <img src="image/loadicon/1x1.png" data-src="image/picture/editions/2.jpg" alt="Рудер, Эмиль. Типографика" class="product__img swiper-lazy">
                 <div class="product__name-price">
                   <p class="product__title">
                     Типографика
@@ -1456,7 +3231,7 @@
             </li>
             <li class="editions__product-item">
               <div class="product">
-                <img src="image/loadicon/loadicon.gif" data-src="image/picture/editions/3.jpg" alt="Гордон, Юрий. Книга про буквы" class="product__img swiper-lazy">
+                <img src="image/loadicon/1x1.png" data-src="image/picture/editions/3.jpg" alt="Гордон, Юрий. Книга про буквы" class="product__img swiper-lazy">
                 <div class="product__name-price">
                   <p class="product__title">
                     Книга про буквы
@@ -1466,14 +3241,14 @@
                   </span>
                 </div>
                 <p class="product__author">
-                  Гордон, Юрий 
+                  Гордон, Юрий
                 </p>
                 <button class="product__btn focus-visible-btn">Заказать</button>
               </div>
             </li>
             <li class="editions__product-item">
               <div class="product">
-                <img src="image/loadicon/loadicon.gif" data-src="image/picture/editions/4.jpg" alt="Кричевский, Владимир. Николай Ильин" class="product__img swiper-lazy">
+                <img src="image/loadicon/1x1.png" data-src="image/picture/editions/4.jpg" alt="Кричевский, Владимир. Николай Ильин" class="product__img swiper-lazy">
                 <div class="product__name-price">
                   <p class="product__title">
                     Николай Ильин
@@ -1490,7 +3265,7 @@
             </li>
             <li class="editions__product-item">
               <div class="product">
-                <img src="image/loadicon/loadicon.gif" data-src="image/picture/editions/5.jpg" alt="Мюллер-Брокманн, Йозеф. Модульные сетки в графическом дизайне" class="product__img swiper-lazy">
+                <img src="image/loadicon/1x1.png" data-src="image/picture/editions/5.jpg" alt="Мюллер-Брокманн, Йозеф. Модульные сетки в графическом дизайне" class="product__img swiper-lazy">
                 <div class="product__name-price">
                   <p class="product__title">
                     Модульные сетки в граф...
@@ -1507,7 +3282,7 @@
             </li>
             <li class="editions__product-item">
               <div class="product">
-                <img src="image/loadicon/loadicon.gif" data-src="image/picture/editions/6.jpg" alt="Хеллер, Чваст. Эволюция графических стилей" class="product__img swiper-lazy">
+                <img src="image/loadicon/1x1.png" data-src="image/picture/editions/6.jpg" alt="Хеллер, Чваст. Эволюция графических стилей" class="product__img swiper-lazy">
                 <div class="product__name-price">
                   <p class="product__title">
                     Эволюция графических ст...
@@ -1524,7 +3299,7 @@
             </li>
             <li class="editions__product-item">
               <div class="product">
-                <img src="image/loadicon/loadicon.gif" data-src="image/picture/editions/7.jpg" alt="Арнхейм, Рудольф. Искусство и визуальное восприятие" class="product__img swiper-lazy">
+                <img src="image/loadicon/1x1.png" data-src="image/picture/editions/7.jpg" alt="Арнхейм, Рудольф. Искусство и визуальное восприятие" class="product__img swiper-lazy">
                 <div class="product__name-price">
                   <p class="product__title">
                     Искусство и визуальное в...
@@ -1552,7 +3327,7 @@
                 620&nbsp;руб
               </span>
               <p class="product__author">
-                Иттен, Иоханнес 
+                Иттен, Иоханнес
               </p>
               <button class="product__btn focus-visible-btn">Заказать</button>
             </div>
@@ -1582,7 +3357,7 @@
                   2&nbsp;200&nbsp;руб
                 </span>
               <p class="product__author">
-                Гордон, Юрий 
+                Гордон, Юрий
               </p>
               <button class="product__btn focus-visible-btn">Заказать</button>
             </div>
@@ -1656,11 +3431,11 @@
           Проекты
         </h2>
         <div class="project__desc">
-          Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное информационно-пропагандистское 
+          Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное информационно-пропагандистское
           <div class="tooltip">
             <div class="tooltip__marker" tabindex="0"></div>
             <div class="tooltip__popup" role="tooltip">
-              Пример современных тенденций - современная методология разработки 
+              Пример современных тенденций - современная методология разработки
             </div>
           </div>
           обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены
@@ -1674,10 +3449,10 @@
           <div class="tooltip">
             <div class="tooltip__marker" tabindex="0"></div>
             <div class="tooltip__popup" role="tooltip">
-              В стремлении повысить качество 
+              В стремлении повысить качество
             </div>
           </div>
-          предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее: 
+          предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее:
           <a href="http://blanchard-art.ru/projects/about" class="project__link">
             blanchard-art.ru/projects/about
           </a>
@@ -1772,7 +3547,7 @@
         </div>
         <div id="map" class="feedback__map"></div>
       </div>
-      
+
     </section>
   </main>
   <footer class="footer">

@@ -39,42 +39,25 @@ selectHeader ();
 
 let selectGallery = function () {
   let selectHeader = document.querySelectorAll('.gallery-select__header');
-  let selectItem = document.querySelectorAll('.gallery-select__item');
 
   selectHeader.forEach(item => {
     item.addEventListener('click', selectToggle)
   });
 
-  selectItem.forEach(item => {
-    item.addEventListener('click', selectChoose)
-  })
-
   document.addEventListener('click', e => {
     let target = e.target;
+    let select = document.querySelector('.gallery-select');
 
-    let selects = document.querySelectorAll('.gallery-select');
+    let itsSelect = target == select || select.contains(target);
+    let selectIsActive = select.classList.contains('is-active');
 
-    selects.forEach(select => {
-      let itsSelect = target == select || select.contains(target) ;
-
-      let selectIsActive = select.classList.contains('is-active');
-
-      if (!itsSelect  && selectIsActive) {
-        select.classList.remove('is-active');
-      }
-    });
+    if (!itsSelect  && selectIsActive) {
+      select.classList.remove('is-active');
+    }
   })
 
   function selectToggle() {
     this.parentElement.classList.toggle('is-active');
-  }
-
-  function selectChoose() {
-    let text = this.innerText;
-    let select = this.closest('.gallery-select');
-    let currentText = select.querySelector('.gallery-select__current')
-    currentText.innerText = text;
-    select.classList.remove('is-active');
   }
 }
 
