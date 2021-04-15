@@ -38,15 +38,19 @@ let selectHeader = function () {
 selectHeader ();
 
 let selectGallery = function () {
-  let selectHeader = document.querySelectorAll('.gallery-select__header');
+  let select = document.querySelector('.gallery-select');
+  let gallerySelectHeader = document.querySelector('.gallery-select__header');
+  let gallerySelectItem = document.querySelectorAll('.gallery-select__item');
+  let originalHeaderText = select.querySelector('.gallery-select__current').innerText;
 
-  selectHeader.forEach(item => {
-    item.addEventListener('click', selectToggle)
-  });
+  gallerySelectHeader.addEventListener('click', selectToggle);
+
+  gallerySelectItem.forEach(item => {
+    item.addEventListener('click', selectClose)
+  })
 
   document.addEventListener('click', e => {
     let target = e.target;
-    let select = document.querySelector('.gallery-select');
 
     let itsSelect = target == select || select.contains(target);
     let selectIsActive = select.classList.contains('is-active');
@@ -58,6 +62,16 @@ let selectGallery = function () {
 
   function selectToggle() {
     this.parentElement.classList.toggle('is-active');
+  }
+
+  function selectClose() {
+    let text = this.innerText;
+    let currentText = select.querySelector('.gallery-select__current');
+
+    currentText.innerText = text;
+    this.querySelector('.gallery-select__item-link').innerText = originalHeaderText;
+    originalHeaderText = text;
+    select.classList.remove('is-active');
   }
 }
 

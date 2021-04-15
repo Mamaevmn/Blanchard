@@ -1,9 +1,3 @@
-// для блока Gallery
-function galleryFilterForm (value) {
-  // берет значение введенное в поле input для дальнейшего использования в фильтре
-  if (value !== '') console.log(value);
-}
-
 // для блока Catalog
 let catalogPainterBtn = document.querySelectorAll('.catalog__painters-btn');
 
