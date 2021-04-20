@@ -150,9 +150,9 @@ let partnersSlider = new Swiper ('#partners__slider', {
     nextEl: '.partners__btn.next',
     prevEl: '.partners__btn.prev'
   },
-  autoplay: {
-    delay: 3500,
-  },
+  // autoplay: {
+  //   delay: 3500,
+  // },
   breakpoints: {
     1600: {
       slidesPerView: 3,
@@ -185,10 +185,10 @@ let partnersSlider = new Swiper ('#partners__slider', {
 
 let projectLartnersList = document.querySelector('.partners__list')
 
-projectLartnersList.addEventListener('mouseenter', function() {
-  partnersSlider.autoplay.stop();
-});
+// projectLartnersList.addEventListener('mouseenter', function() {
+//   partnersSlider.autoplay.stop();
+// });
 
-projectLartnersList.addEventListener('mouseleave', function() {
-  partnersSlider.autoplay.start();
-})
+// projectLartnersList.addEventListener('mouseleave', function() {
+//   partnersSlider.autoplay.start();
+// })

@@ -329,7 +329,7 @@ button {
 
 .select__body {
   width: 300px;
-  height: 300px;
+  max-height: 300px;
   background-color: rgba(0, 0, 0, 0.4);
   display: none;
   flex-direction: column;
@@ -402,6 +402,11 @@ button {
 .select__item-link:active {
   border-color: #D1A9F0;
   background: rgba(194, 131, 243, 0.4);
+}
+
+.simplebar-wrapper {
+  height: 100%;
+  max-height: 220px;
 }
 
 .simplebar-content-wrapper {
@@ -1571,7 +1576,7 @@ button {
   color: #7943A4;
 }
 
-.checkbox__label:focus {
+.checkbox__label:focus-within {
   outline: 2px solid #C283F3;
   outline-offset: 2px;
 }
@@ -1597,9 +1602,7 @@ button {
 
 .checkbox__input:active + .checkbox__checkmark,
 .checkbox__input:hover + .checkbox__checkmark,
-.checkbox__input:focus + .checkbox__checkmark,
-.checkbox__input + .checkbox__checkmark:hover,
-.checkbox__input + .checkbox__checkmark:focus {
+.checkbox__input + .checkbox__checkmark:hover {
   border-color: #C283F3;
 }
 
@@ -1639,10 +1642,6 @@ button {
 
 .checkbox__input:active:checked + .checkbox__checkmark::before {
   background: #7943A4;
-}
-
-.checkbox__btn {
-  display: none;
 }
 
 .price-filter {
@@ -2034,85 +2033,26 @@ button {
   outline: none;
 }
 
-.ff {
-  background-image: url('../image/partners/ff.png');
+.partners__link-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: .25;
+  transition-property: opacity, filter, transform;
+  transition-duration: .3s;
+  transition-timing-function: ease;
 }
 
-.ff:hover,
-.ff:focus {
-  background-image: url('../image/partners/ff_color.png');
+.partners__link:hover .partners__link-img,
+.partners__link:focus .partners__link-img {
+  opacity: 1;
+  filter: grayscale(0);
 }
 
-.ifca {
-  background-image: url('../image/partners/ifca.png');
-}
-
-.ifca:hover,
-.ifca:focus {
-  background-image: url('../image/partners/ifca_color.png');
-}
-
-.wac {
-  background-image: url('../image/partners/wac.png');
-}
-
-.wac:hover,
-.wac:focus {
-  background-image: url('../image/partners/wac_color.png');
-}
-
-.wc {
-  background-image: url('../image/partners/wc.png');
-}
-
-.wc:hover,
-.wc:focus {
-  background-image: url('../image/partners/wc_color.png');
-}
-
-.hiscox {
-  background-image: url('../image/partners/hiscox.png');
-}
-
-.hiscox:hover,
-.hiscox:focus {
-  background-image: url('../image/partners/hiscox_color.png');
-}
-
-.cac {
-  background-image: url('../image/partners/cac.png');
-}
-
-.cac:hover,
-.cac:focus {
-  background-image: url('../image/partners/cac_color.png');
-}
-
-.spbc {
-  background-image: url('../image/partners/spbc.png');
-}
-
-.spbc:hover,
-.spbc:focus {
-  background-image: url('../image/partners/spbc_color.png');
-}
-
-.wgav {
-  background-image: url('../image/partners/wgav.png');
-}
-
-.wgav:hover,
-.wgav:focus {
-  background-image: url('../image/partners/wgav_color.png');
-}
-
-.esad {
-  background-image: url('../image/partners/esad.png');
-}
-
-.esad:hover,
-.esad:focus {
-  background-image: url('../image/partners/esad_color.png');
+.partners__link:active .partners__link-img {
+  transform: scale(1.05);
 }
 
 .contacts {
@@ -3458,18 +3398,11 @@ button {
 
   .checkbox__label {
     width: 100%;
-  }
-
-  .checkbox__btn {
     display: block;
-    width: 15px;
-    height: 15px;
-    background-color: transparent;
-    position: relative;
   }
 
-  .checkbox__btn::before,
-  .checkbox__btn::after {
+  .checkbox__label.desktop::before,
+  .checkbox__label.desktop::after {
     content: '';
     background-color: #FFF;
     position: absolute;
@@ -3477,29 +3410,27 @@ button {
     height: 1px;
     cursor: pointer;
     top: 50%;
-    right: 50%;
+    right: 0;
     transition-property: background-color,transform;
     transition-duration: .3s;
     transition-timing-function: ease;
   }
 
-  .checkbox__btn::before {
-    transform: translate(50%, -50%) rotate(45deg);
+  .checkbox__label.desktop::before {
+    transform: translateY(-50%) rotate(45deg);
   }
 
-  .checkbox__btn::after {
-    transform: translate(50%, -50%) rotate(-45deg);
+  .checkbox__label.desktop::after {
+    transform: translateY(-50%) rotate(-45deg);
   }
 
-  .checkbox__btn:hover::before,
-  .checkbox__btn:hover::after,
-  .checkbox__btn:focus::before,
-  .checkbox__btn:focus::after {
+  .checkbox__label.desktop:hover::before,
+  .checkbox__label.desktop:hover::after {
     background-color: #C283F3;
   }
 
-  .checkbox__btn:active::before,
-  .checkbox__btn:active::after {
+  .checkbox__label.desktop:active::before,
+  .checkbox__label.desktop:active::after {
     background-color: #7943A4;
   }
 

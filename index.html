@@ -27,8 +27,9 @@
   <script src="js/zoompicture.js" defer></script>
   <script src="js/tabs.js" defer></script>
   <script src="js/accordion.js" defer></script>
+  <script src="js/editions-filter.js" defer></script>
   <script src="js/feedback-form.js" defer></script>
-  <script src="js/map.js"></script>
+  <script src="js/map.js" defer></script>
   <script src="js/script.js" defer></script>
 
 </head>
@@ -3825,98 +3826,97 @@
             <h3 class="editions__filter-title accordion__title">Категории</h3>
             <ul class="editions__category-list">
               <li class="editions__category-item">
-                <label for="accordion-category-1" class="checkbox__label" tabindex="0">
+                <label for="accordion-category-1" class="checkbox__label">
                   <input type="checkbox" class="checkbox__input" name="category-1" id="accordion-category-1"
-                    aria-checked="true" onclick="changeClassCategoryItem(this, this.name)"
-                    onkeypress="checkedOnKeyPress(this)">
+                    aria-checked="true">
                   Бестселлеры
                   <span class="checkbox__checkmark"></span>
                 </label>
               </li>
               <li class="editions__category-item">
-                <label for="accordion-category-2" class="checkbox__label" tabindex="0">
+                <label for="accordion-category-2" class="checkbox__label">
                   <input type="checkbox" class="checkbox__input" name="category-2" id="accordion-category-2"
-                    aria-checked="true" onclick="changeClassCategoryItem(this, this.name)">
+                    aria-checked="true">
                   Искусство
                   <span class="checkbox__checkmark"></span>
                 </label>
               </li>
               <li class="editions__category-item">
-                <label for="accordion-category-3" class="checkbox__label" tabindex="0">
+                <label for="accordion-category-3" class="checkbox__label">
                   <input type="checkbox" class="checkbox__input" name="category-3" id="accordion-category-3"
-                    aria-checked="true" onclick="changeClassCategoryItem(this, this.name)">
+                    aria-checked="true">
                   Архитектура
                   <span class="checkbox__checkmark"></span>
                 </label>
               </li>
               <li class="editions__category-item">
-                <label for="accordion-category-4" class="checkbox__label" tabindex="0">
+                <label for="accordion-category-4" class="checkbox__label">
                   <input type="checkbox" class="checkbox__input" name="category-4" id="accordion-category-4"
-                    aria-checked="true" onclick="changeClassCategoryItem(this, this.name)">
+                    aria-checked="true">
                   Дизайн
                   <span class="checkbox__checkmark"></span>
                 </label>
               </li>
               <li class="editions__category-item">
-                <label for="accordion-category-5" class="checkbox__label" tabindex="0">
+                <label for="accordion-category-5" class="checkbox__label">
                   <input type="checkbox" class="checkbox__input" name="category-5" id="accordion-category-5"
-                    aria-checked="true" onclick="changeClassCategoryItem(this, this.name)">
+                    aria-checked="true">
                   Мода
                   <span class="checkbox__checkmark"></span>
                 </label>
               </li>
               <li class="editions__category-item">
-                <label for="accordion-category-6" class="checkbox__label" tabindex="0">
+                <label for="accordion-category-6" class="checkbox__label">
                   <input type="checkbox" class="checkbox__input" name="category-6" id="accordion-category-6"
-                    aria-checked="true" onclick="changeClassCategoryItem(this, this.name)">
+                    aria-checked="true">
                   Детям
                   <span class="checkbox__checkmark"></span>
                 </label>
               </li>
               <li class="editions__category-item">
-                <label for="accordion-category-7" class="checkbox__label" tabindex="0">
+                <label for="accordion-category-7" class="checkbox__label">
                   <input type="checkbox" class="checkbox__input" name="category-7" id="accordion-category-7"
-                    aria-checked="true" onclick="changeClassCategoryItem(this, this.name)">
+                    aria-checked="true">
                   Художественная литература
                   <span class="checkbox__checkmark"></span>
                 </label>
               </li>
               <li class="editions__category-item">
-                <label for="accordion-category-8" class="checkbox__label" tabindex="0">
+                <label for="accordion-category-8" class="checkbox__label">
                   <input type="checkbox" class="checkbox__input" name="category-8" id="accordion-category-8"
-                    aria-checked="true" onclick="changeClassCategoryItem(this, this.name)">
+                    aria-checked="true">
                   Публицистика
                   <span class="checkbox__checkmark"></span>
                 </label>
               </li>
               <li class="editions__category-item">
-                <label for="accordion-category-9" class="checkbox__label" tabindex="0">
+                <label for="accordion-category-9" class="checkbox__label">
                   <input type="checkbox" class="checkbox__input" name="category-9" id="accordion-category-9"
-                    aria-checked="true" onclick="changeClassCategoryItem(this, this.name)">
+                    aria-checked="true">
                   Путеводители
                   <span class="checkbox__checkmark"></span>
                 </label>
               </li>
               <li class="editions__category-item">
-                <label for="accordion-category-10" class="checkbox__label" tabindex="0">
+                <label for="accordion-category-10" class="checkbox__label">
                   <input type="checkbox" class="checkbox__input" name="category-10" id="accordion-category-10"
-                    aria-checked="true" onclick="changeClassCategoryItem(this, this.name)">
+                    aria-checked="true">
                   Философия
                   <span class="checkbox__checkmark"></span>
                 </label>
               </li>
               <li class="editions__category-item">
-                <label for="accordion-category-11" class="checkbox__label" tabindex="0">
+                <label for="accordion-category-11" class="checkbox__label">
                   <input type="checkbox" class="checkbox__input" name="category-11" id="accordion-category-11"
-                    aria-checked="true" onclick="changeClassCategoryItem(this, this.name)">
+                    aria-checked="true">
                   Учебная литература
                   <span class="checkbox__checkmark"></span>
                 </label>
               </li>
               <li class="editions__category-item">
-                <label for="accordion-category-12" class="checkbox__label" tabindex="0">
+                <label for="accordion-category-12" class="checkbox__label">
                   <input type="checkbox" class="checkbox__input" name="category-12" id="accordion-category-12"
-                    aria-checked="true" onclick="changeClassCategoryItem(this, this.name)">
+                    aria-checked="true">
                   Журналы и газеты
                   <span class="checkbox__checkmark"></span>
                 </label>
@@ -3925,114 +3925,88 @@
           </div>
           <ul class="editions__category-list desktop">
             <li class="editions__category-item">
-              <label for="category-1" class="checkbox__label" tabindex="0">
-                <input type="checkbox" class="checkbox__input" name="category-1" id="category-1" aria-checked="true"
-                  onclick="changeCheckedInputAccordion(this, this.name)">
+              <label for="category-1" class="checkbox__label desktop">
+                <input type="checkbox" class="checkbox__input" name="category-1" id="category-1" aria-checked="true">
                 Бестселлеры
                 <span class="checkbox__checkmark"></span>
               </label>
-              <button class="checkbox__btn" onclick="closeBtn(this)" title="убрать категорию Бестселлеры"></button>
             </li>
             <li class="editions__category-item">
-              <label for="category-2" class="checkbox__label" tabindex="0">
-                <input type="checkbox" class="checkbox__input" name="category-2" id="category-2" aria-checked="true"
-                  onclick="changeCheckedInputAccordion(this, this.name)">
+              <label for="category-2" class="checkbox__label desktop">
+                <input type="checkbox" class="checkbox__input" name="category-2" id="category-2" aria-checked="true">
                 Искусство
                 <span class="checkbox__checkmark"></span>
               </label>
-              <button class="checkbox__btn" onclick="closeBtn(this)" title="убрать категорию Искусство"></button>
             </li>
             <li class="editions__category-item">
-              <label for="category-3" class="checkbox__label" tabindex="0">
-                <input type="checkbox" class="checkbox__input" name="category-3" id="category-3" aria-checked="true"
-                  onclick="changeCheckedInputAccordion(this, this.name)">
+              <label for="category-3" class="checkbox__label desktop">
+                <input type="checkbox" class="checkbox__input" name="category-3" id="category-3" aria-checked="true">
                 Архитектура
                 <span class="checkbox__checkmark"></span>
               </label>
-              <button class="checkbox__btn" onclick="closeBtn(this)" title="убрать категорию Архитектура"></button>
             </li>
             <li class="editions__category-item">
-              <label for="category-4" class="checkbox__label" tabindex="0">
-                <input type="checkbox" class="checkbox__input" name="category-4" id="category-4" aria-checked="true"
-                  onclick="changeCheckedInputAccordion(this, this.name)">
+              <label for="category-4" class="checkbox__label desktop">
+                <input type="checkbox" class="checkbox__input" name="category-4" id="category-4" aria-checked="true">
                 Дизайн
                 <span class="checkbox__checkmark"></span>
               </label>
-              <button class="checkbox__btn" onclick="closeBtn(this)" title="убрать категорию Дизайн"></button>
             </li>
             <li class="editions__category-item">
-              <label for="category-5" class="checkbox__label" tabindex="0">
-                <input type="checkbox" class="checkbox__input" name="category-5" id="category-5" aria-checked="true"
-                  onclick="changeCheckedInputAccordion(this, this.name)">
+              <label for="category-5" class="checkbox__label desktop">
+                <input type="checkbox" class="checkbox__input" name="category-5" id="category-5" aria-checked="true">
                 Мода
                 <span class="checkbox__checkmark"></span>
               </label>
-              <button class="checkbox__btn" onclick="closeBtn(this)" title="убрать категорию Мода"></button>
             </li>
             <li class="editions__category-item">
-              <label for="category-6" class="checkbox__label" tabindex="0">
-                <input type="checkbox" class="checkbox__input" name="category-6" id="category-6" aria-checked="true"
-                  onclick="changeCheckedInputAccordion(this, this.name)">
+              <label for="category-6" class="checkbox__label desktop">
+                <input type="checkbox" class="checkbox__input" name="category-6" id="category-6" aria-checked="true">
                 Детям
                 <span class="checkbox__checkmark"></span>
               </label>
-              <button class="checkbox__btn" onclick="closeBtn(this)" title="убрать категорию Детям"></button>
             </li>
             <li class="editions__category-item">
-              <label for="category-7" class="checkbox__label" tabindex="0">
-                <input type="checkbox" class="checkbox__input" name="category-7" id="category-7" aria-checked="true"
-                  onclick="changeCheckedInputAccordion(this, this.name)">
+              <label for="category-7" class="checkbox__label desktop">
+                <input type="checkbox" class="checkbox__input" name="category-7" id="category-7" aria-checked="true">
                 Художественная литература
                 <span class="checkbox__checkmark"></span>
               </label>
-              <button class="checkbox__btn" onclick="closeBtn(this)"
-                title="убрать категорию Художественная литература"></button>
             </li>
             <li class="editions__category-item">
-              <label for="category-8" class="checkbox__label" tabindex="0">
-                <input type="checkbox" class="checkbox__input" name="category-8" id="category-8" aria-checked="true"
-                  onclick="changeCheckedInputAccordion(this, this.name)">
+              <label for="category-8" class="checkbox__label desktop">
+                <input type="checkbox" class="checkbox__input" name="category-8" id="category-8" aria-checked="true">
                 Публицистика
                 <span class="checkbox__checkmark"></span>
               </label>
-              <button class="checkbox__btn" onclick="closeBtn(this)" title="убрать категорию Публицистика"></button>
             </li>
             <li class="editions__category-item">
-              <label for="category-9" class="checkbox__label" tabindex="0">
-                <input type="checkbox" class="checkbox__input" name="category-9" id="category-9" aria-checked="true"
-                  onclick="changeCheckedInputAccordion(this, this.name)">
+              <label for="category-9" class="checkbox__label desktop">
+                <input type="checkbox" class="checkbox__input" name="category-9" id="category-9" aria-checked="true">
                 Путеводители
                 <span class="checkbox__checkmark"></span>
               </label>
-              <button class="checkbox__btn" onclick="closeBtn(this)" title="убрать категорию Путеводители"></button>
             </li>
             <li class="editions__category-item">
-              <label for="category-10" class="checkbox__label" tabindex="0">
-                <input type="checkbox" class="checkbox__input" name="category-10" id="category-10" aria-checked="true"
-                  onclick="changeCheckedInputAccordion(this, this.name)">
+              <label for="category-10" class="checkbox__label desktop">
+                <input type="checkbox" class="checkbox__input" name="category-10" id="category-10" aria-checked="true">
                 Философия
                 <span class="checkbox__checkmark"></span>
               </label>
-              <button class="checkbox__btn" onclick="closeBtn(this)" title="убрать категорию Философия"></button>
             </li>
             <li class="editions__category-item">
-              <label for="category-11" class="checkbox__label" tabindex="0">
-                <input type="checkbox" class="checkbox__input" name="category-11" id="category-11" aria-checked="true"
-                  onclick="changeCheckedInputAccordion(this, this.name)">
+              <label for="category-11" class="checkbox__label desktop">
+                <input type="checkbox" class="checkbox__input" name="category-11" id="category-11" aria-checked="true">
                 Учебная литература
                 <span class="checkbox__checkmark"></span>
               </label>
-              <button class="checkbox__btn" onclick="closeBtn(this)"
-                title="убрать категорию Учебная литература"></button>
             </li>
             <li class="editions__category-item">
-              <label for="category-12" class="checkbox__label" tabindex="0">
-                <input type="checkbox" class="checkbox__input" name="category-12" id="category-12" aria-checked="true"
-                  onclick="changeCheckedInputAccordion(this, this.name)">
+              <label for="category-12" class="checkbox__label desktop">
+                <input type="checkbox" class="checkbox__input" name="category-12" id="category-12" aria-checked="true">
                 Журналы и газеты
                 <span class="checkbox__checkmark"></span>
               </label>
-              <button class="checkbox__btn" onclick="closeBtn(this)" title="убрать категорию Журналы и газеты"></button>
             </li>
           </ul>
           <p class="editions__filter-title">
@@ -4041,12 +4015,10 @@
           <div class="price-filter">
             <p>От</p>
             <label for="from" class="hidden"></label>
-            <input id="from" type="text" class="price-filter__input" placeholder="50" autocomplete="off"
-              onchange="eventPriceInput(this.value)" onkeypress="validatePriceFilterInput(this.value)">
+            <input id="from" type="text" class="price-filter__input" placeholder="50" autocomplete="off">
             <p>до</p>
             <label for="to" class="hidden"></label>
-            <input id="to" type="text" class="price-filter__input" placeholder="25 000" autocomplete="off"
-              onchange="eventPriceInput(this.value)" onkeypress="validatePriceFilterInput(this.value)">
+            <input id="to" type="text" class="price-filter__input" placeholder="25 000" autocomplete="off">
             <p>руб.</p>
           </div>
         </div>
@@ -4344,31 +4316,49 @@
           <div id="partners__slider" class="partners">
             <ul class="partners__list">
               <li class="partners__item">
-                <a href="#!" class="partners__link ff"></a>
+                <a href="#!" class="partners__link">
+                  <img src="image/partners/ff_color.png" alt="" class="partners__link-img">
+                </a>
               </li>
               <li class="partners__item">
-                <a href="#!" class="partners__link ifca"></a>
+                <a href="#!" class="partners__link">
+                  <img src="image/partners/ifca_color.png" alt="" class="partners__link-img">
+                </a>
               </li>
               <li class="partners__item">
-                <a href="#!" class="partners__link wac"></a>
+                <a href="#!" class="partners__link">
+                  <img src="image/partners/wac_color.png" alt="" class="partners__link-img">
+                </a>
               </li>
               <li class="partners__item">
-                <a href="#!" class="partners__link wc"></a>
+                <a href="#!" class="partners__link">
+                  <img src="image/partners/wc_color.png" alt="" class="partners__link-img">
+                </a>
               </li>
               <li class="partners__item">
-                <a href="#!" class="partners__link hiscox"></a>
+                <a href="#!" class="partners__link">
+                  <img src="image/partners/hiscox_color.png" alt="" class="partners__link-img">
+                </a>
               </li>
               <li class="partners__item">
-                <a href="#!" class="partners__link cac"></a>
+                <a href="#!" class="partners__link">
+                  <img src="image/partners/cac_color.png" alt="" class="partners__link-img">
+                </a>
               </li>
               <li class="partners__item">
-                <a href="#!" class="partners__link spbc"></a>
+                <a href="#!" class="partners__link">
+                  <img src="image/partners/spbc_color.png" alt="" class="partners__link-img">
+                </a>
               </li>
               <li class="partners__item">
-                <a href="#!" class="partners__link wgav"></a>
+                <a href="#!" class="partners__link">
+                  <img src="image/partners/wgav_color.png" alt="" class="partners__link-img">
+                </a>
               </li>
               <li class="partners__item">
-                <a href="#!" class="partners__link esad"></a>
+                <a href="#!" class="partners__link">
+                  <img src="image/partners/esad_color.png" alt="" class="partners__link-img">
+                </a>
               </li>
             </ul>
           </div>
