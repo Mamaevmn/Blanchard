@@ -18,6 +18,9 @@ function changeClassCategoryItem (target, name) {
 
     if (input.name === name) {
       input.checked = target.checked;
+
+      input.parentElement.classList.toggle('checked')
+      target.parentNode.classList.toggle('checked');
       parentInput.classList.toggle('checked');
     }
   }
@@ -36,6 +39,10 @@ function changeCheckedInputAccordion (target, name) {
 
     if (input.name === name) {
       input.checked = target.checked;
+
+      input.parentElement.classList.toggle('checked')
+      target.parentNode.classList.toggle('checked');
+
       parentTarget.classList.toggle('checked');
     }
   }
