@@ -4513,15 +4513,19 @@
           <p class="feedback__contact">
             Заказать обратный звонок
           </p>
-          <form class="feedback__form" action="https://jsonplaceholder.typicode.com/posts" method="POST">
+          <form class="feedback__form" enctype="multipart/form-data" method="POST">
+            <input type="hidden" name="project_name" value="Blanchard">
+            <input type="hidden" name="admin_email" value="mamaev.mn@maxmamaev.me">
+            <input type="hidden" name="form_subject" value="Форма обратной связи">
+
             <div class="feedback__input-block">
               <label for="name" class="hidden">Имя</label>
-              <input type="text" class="feedback__input" id="name" name="name" placeholder="Имя*" autocomplete="off"
+              <input type="text" class="feedback__input" id="name" name="Имя" placeholder="Имя*" autocomplete="off"
                 data-validate-field="name">
             </div>
             <div class="feedback__input-block">
               <label for="tel" class="hidden">Телефон</label>
-              <input type="tel" class="feedback__input" id="tel" name="tel" placeholder="Телефон*" autocomplete="off"
+              <input type="tel" class="feedback__input" id="tel" name="Телефон" placeholder="Телефон*" autocomplete="off"
                 data-validate-field="tel">
             </div>
             <button class="feedback__btn focus-visible-btn" type="submit">Заказать</button>

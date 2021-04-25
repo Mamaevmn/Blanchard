@@ -3,9 +3,11 @@ let catalogPainterBtn = document.querySelectorAll('.catalog__painters-btn');
 
 catalogPainterBtn.forEach(painter => {
   painter.addEventListener('click', function(e) {
-
     let target = e.target;
     let targetPath = e.target.dataset.path;
+
+    let windowWidth = document.documentElement.clientWidth;
+
     let catalogPaintersItemArray = target.closest('.catalog__painters-list').children;
     let activeLangBlock = document.querySelector('.catalog__lang-block.is-active');
     let activeCatalogBiographyItem = activeLangBlock.querySelectorAll('.catalog__biography-item');
@@ -24,6 +26,10 @@ catalogPainterBtn.forEach(painter => {
 
     target.classList.add('is-active');
     document.querySelector(`[data-target="${targetPath}"]`).classList.add('is-active');
+
+    if (windowWidth <= 767) {
+      document.querySelector(`[data-target="${targetPath}"]`).scrollIntoView({behavior: "smooth"});
+    }
   })
 })
 

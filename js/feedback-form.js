@@ -9,7 +9,7 @@ new JustValidate('.feedback__form', {
       required: true,
       minLength: 2,
       maxLength: 25
-    }, 
+    },
     tel: {
       required: true,
       function: (name, value) => {
@@ -17,7 +17,7 @@ new JustValidate('.feedback__form', {
         return Number(phone) && phone.length === 10
       }
     }
-  }, 
+  },
   colorWrong: 'red',
   messages: {
     name: {
@@ -29,4 +29,22 @@ new JustValidate('.feedback__form', {
       function: 'Введен некорректный телефон',
     }
   },
+  submitHandler: function(form) {
+    let formData = new FormData(form);
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          alert("Спасибо за заявку! В ближайшее время мы свяжемся с вами!");
+        }
+      }
+    }
+
+    xhr.open('POST', 'mail.php', true);
+    xhr.send(formData);
+
+    form.reset();
+  }
 })
