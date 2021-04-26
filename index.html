@@ -19,6 +19,7 @@
   <script src="js/inputmask.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script src="js/enable-disableScroll.js"></script>
   <script src="js/focus-visible-btn.min.js"></script>
   <script src="js/burger-menu.js" defer></script>
   <script src="js/sliders.js" defer></script>
@@ -4547,6 +4548,14 @@
         <div id="map" class="feedback__map"></div>
       </div>
 
+      <div id="successful-modal" class="successful-modal">
+        <div class="successful-modal__popup">
+          <h1 class="successful-modal__title title">Спасибо за заявку!</h1>
+          <p class="successful-modal__content">В ближайшее время мы свяжемся с вами!</p>
+          <button class="successful-modal__ok-btn focus-visible-btn" id="ok-btn">Хорошо</button>
+        </div>
+      </div>
+
     </section>
   </main>
   <footer class="footer">
@@ -4570,6 +4579,7 @@
       </ul>
     </div>
   </footer>
+
 </body>
 
 </html>

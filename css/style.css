@@ -2417,6 +2417,71 @@ button {
   margin-bottom: 41px;
 }
 
+.successful-modal {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .75);
+  z-index: 1000;
+}
+
+.successful-modal.is-active {
+  display: flex;
+}
+
+.successful-modal__popup {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 30px;
+  padding: 50px 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.successful-modal__content {
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+
+.successful-modal__ok-btn {
+  border: 2px solid #9D5CD0;
+  border-radius: 100px;
+  background: transparent;
+  width: 157px;
+  height: 60px;
+  text-align: center;
+  color: #9D5CD0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  transition-property: color, background, border-color;
+  transition-duration: .3s;
+  transition-timing-function: ease;
+  position: relative;
+}
+
+.successful-modal__ok-btn:hover {
+  color: #FFF;
+  background: #9D5CD0;
+}
+
+.successful-modal__ok-btn:active {
+  background: #7943A4;
+  color: #FFF;
+  border-color: #D1A9F0;
+  outline: none;
+}
+
+.successful-modal__ok-btn::after {
+  top: -8px;
+  left: -8px;
+}
+
 @media (max-width: 1600px) {
   .container {
     padding-left: 50px;
@@ -3805,6 +3870,35 @@ button {
   .footer__item-link {
     width: 50px;
     height: 50px;
+  }
+
+  .successful-modal {
+    min-width: 320px;
+    padding: 0 15px;
+
+  }
+
+  .successful-modal__popup {
+    padding: 25px;
+  }
+
+  .successful-modal__title {
+    font-size: 28px;
+    text-align: center;
+
+  }
+
+  .successful-modal__content {
+    font-size: 16px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  .successful-modal__ok-btn {
+    width: 128px;
+    height: 40px;
+    font-size: 12px;
+    line-height: 16px;
   }
 }
 

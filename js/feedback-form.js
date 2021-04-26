@@ -37,7 +37,7 @@ new JustValidate('.feedback__form', {
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
-          alert("Спасибо за заявку! В ближайшее время мы свяжемся с вами!");
+          successefulSendForm ();
         }
       }
     }
@@ -48,3 +48,16 @@ new JustValidate('.feedback__form', {
     form.reset();
   }
 })
+
+function successefulSendForm () {
+  let successefulModal = document.getElementById('successful-modal');
+  let okBtn = document.getElementById('ok-btn');
+
+  successefulModal.classList.add('is-active');
+  disableScroll()
+
+  okBtn.addEventListener('click', function () {
+    successefulModal.classList.remove('is-active');
+    enableScroll()
+  })
+}
