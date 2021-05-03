@@ -3,6 +3,7 @@ let accordionCategoryInput = editionsAccordion.querySelectorAll('.checkbox__inpu
 let categoryListDesktop = document.querySelector('.editions__category-list.desktop');
 let categoryInputDesktop = categoryListDesktop.querySelectorAll('.checkbox__input');
 let priceFilterInput = document.querySelectorAll('.price-filter__input');
+let productPrice = document.querySelectorAll('.product__price')
 
 accordionCategoryInput.forEach(category => {
   category.addEventListener('click', e => {
@@ -51,7 +52,8 @@ function changeCheckedInputAccordion (target, name) {
 priceFilterInput.forEach(input => {
   input.addEventListener('change', e => {
     let target = e.target.value;
-    eventPriceInput(target)
+
+    eventPriceInput(target);
   })
 })
 

@@ -1,3 +1,14 @@
+// для блока Header и Hero
+
+let menuLinkItem = document.querySelectorAll('.header__item-link, .hero__subscribe-btn');
+
+menuLinkItem.forEach(link => {
+  link.addEventListener('click', function(e){
+    e.preventDefault();
+    document.querySelector(this.hash).scrollIntoView();
+  })
+})
+
 // для блока Catalog
 let catalogPainterBtn = document.querySelectorAll('.catalog__painters-btn');
 
@@ -124,3 +135,22 @@ tooltip.forEach(tooltip => {
     tooltipMarker.addEventListener(event, hide);
   });
 });
+
+// для модальных окон
+let okBtn = document.querySelectorAll('.modal__ok-btn');
+
+function errorModal () {
+  let errorModal = document.getElementById('error-modal');
+
+  errorModal.classList.add('is-active');
+  disableScroll()
+}
+
+okBtn.forEach(btn => {
+  btn.addEventListener('click', function (e) {
+    let target = e.target;
+
+    target.closest('.modal').classList.remove('is-active');
+    enableScroll();
+  })
+})

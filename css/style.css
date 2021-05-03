@@ -2405,7 +2405,7 @@ button {
   color: #969696;
 }
 
-.successful-modal {
+.modal {
   position: fixed;
   left: 0;
   right: 0;
@@ -2418,11 +2418,11 @@ button {
   background-color: rgba(0, 0, 0, 0.75);
 }
 
-.successful-modal.is-active {
+.modal.is-active {
   display: flex;
 }
 
-.successful-modal__popup {
+.modal__popup {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2431,12 +2431,12 @@ button {
   background-color: rgba(255, 255, 255, 0.95);
 }
 
-.successful-modal__content {
+.modal__content {
   margin-bottom: 50px;
   font-size: 24px;
 }
 
-.successful-modal__ok-btn {
+.modal__ok-btn {
   position: relative;
   border: 2px solid #9d5cd0;
   border-radius: 100px;
@@ -2453,19 +2453,19 @@ button {
   transition-timing-function: ease;
 }
 
-.successful-modal__ok-btn:hover {
+.modal__ok-btn:hover {
   color: #fff;
   background: #9d5cd0;
 }
 
-.successful-modal__ok-btn:active {
+.modal__ok-btn:active {
   outline: none;
   border-color: #d1a9f0;
   color: #fff;
   background: #7943a4;
 }
 
-.successful-modal__ok-btn::after {
+.modal__ok-btn::after {
   left: -8px;
   top: -8px;
 }
@@ -2961,6 +2961,10 @@ button {
     margin-bottom: 30px;
   }
 
+  .gallery-select__item {
+    background-color: #000;
+  }
+
   .gallery__container {
     flex-direction: column;
   }
@@ -3116,7 +3120,7 @@ button {
   }
 
   .projects__link {
-    display: block;
+    display: inline-block;
   }
 
   .partners {
@@ -3164,6 +3168,7 @@ button {
   }
 
   .header__top {
+    position: fixed;
     padding: 12px 0;
   }
 
@@ -3727,6 +3732,7 @@ button {
   }
 
   .contacts {
+    overflow: visible;
     margin-bottom: 30px;
   }
 
@@ -3854,27 +3860,27 @@ button {
     height: 50px;
   }
 
-  .successful-modal {
+  .modal {
     padding: 0 15px;
     min-width: 320px;
   }
 
-  .successful-modal__popup {
+  .modal__popup {
     padding: 25px;
   }
 
-  .successful-modal__title {
+  .modal__title {
     font-size: 28px;
     text-align: center;
   }
 
-  .successful-modal__content {
+  .modal__content {
     margin-bottom: 25px;
     font-size: 16px;
     text-align: center;
   }
 
-  .successful-modal__ok-btn {
+  .modal__ok-btn {
     width: 128px;
     height: 40px;
     font-size: 12px;
